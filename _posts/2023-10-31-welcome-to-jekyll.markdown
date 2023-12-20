@@ -29,9 +29,9 @@ categories: jekyll update
   
   Linux没安装中文输入法
 
-{% highlight ruby %}
+
 # 人生信念就是死也要死在中国
-{% endhighlight %}
+
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
