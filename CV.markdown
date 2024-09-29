@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bucket List
+title: CV
 permalink: /BucketList/
 ---
 
