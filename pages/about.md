@@ -2,19 +2,16 @@
 layout: page
 title: About
 description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+keywords: Xinyi He
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+Proven in tackling challenges and collaborating effectively in teams. 
+Experienced in problem-solving through effective communication and accustomed to thriving in international work environments.
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
-
-## 联系
+## Contact
 
 <ul>
 {% for website in site.data.social %}
