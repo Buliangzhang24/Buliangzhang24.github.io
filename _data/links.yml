@@ -1,25 +1,25 @@
-- name: 码志
-  url: http://mazhuang.org
+- name: Wagenningen University & Research
+  url: https://www.wur.nl/en.htm
   src: life
 
-- name: Connie 酱
-  url: https://connie99.github.io
+- name: ArcGIS Experience Builder
+  url: https://developers.arcgis.com/experience-builder/guide/install-guide/
   src: life
 
 - name: 只宁静不致远
   url: http://zxning.github.io
   src: life
 
-- name: Blog Something
-  url: http://chenxiaoyoyo.github.io
+- name: World Meteorological
+  url: https://erecruit.wmo.int/public/
   src: life
 
-- name: 日新亭
-  url: http://www.fengerzh.com/
+- name: Gaoxiao Job
+  url: https://www.gaoxiaojob.com 
   src: life
 
-- name: wanandroid
-  url: http://www.wanandroid.com/
+- name: Italki
+  url: https://www.italki.com
   src: life
 
 - name: ZZY补完计划
