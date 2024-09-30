@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/feed.xml" rel="self" type="application/atom+xml" /><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/" rel="alternate" type="text/html" /><updated>2024-10-01T00:34:52+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/feed.xml</id><title type="html">Xinyi He</title><subtitle>A GISer, Remote Sensing Lover and Point Cloud Processor</subtitle><author><name>Xinyi He</name></author><entry><title type="html">ThesisNote｜Automatic reconstruction of road surface features by using terrestrial mobile lidar</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic-reconstruction-of-road-surface-features-by-using-terrestrial-mobile-lidar/" rel="alternate" type="text/html" title="ThesisNote｜Automatic reconstruction of road surface features by using terrestrial mobile lidar" /><published>2024-09-25T00:00:00+02:00</published><updated>2024-09-25T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic%20reconstruction%20of%20road%20surface%20features%20by%20using%20terrestrial%20mobile%20lidar</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic-reconstruction-of-road-surface-features-by-using-terrestrial-mobile-lidar/"><![CDATA[<p>对路面的重建（Lidar）</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/feed.xml" rel="self" type="application/atom+xml" /><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/" rel="alternate" type="text/html" /><updated>2024-10-01T00:38:35+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/feed.xml</id><title type="html">Xinyi He</title><subtitle>A GISer, Remote Sensing Lover and Point Cloud Processor</subtitle><author><name>Xinyi He</name></author><entry><title type="html">CV</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/30/CV/" rel="alternate" type="text/html" title="CV" /><published>2024-09-30T00:00:00+02:00</published><updated>2024-09-30T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/30/CV</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/30/CV/"><![CDATA[<p><img src="/images/project/1.png" alt="" />
+<img src="/images/project/2.png" alt="" /></p>]]></content><author><name>Xinyi He</name></author><summary type="html"><![CDATA[CV]]></summary></entry><entry><title type="html">ThesisNote｜Automatic reconstruction of road surface features by using terrestrial mobile lidar</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic-reconstruction-of-road-surface-features-by-using-terrestrial-mobile-lidar/" rel="alternate" type="text/html" title="ThesisNote｜Automatic reconstruction of road surface features by using terrestrial mobile lidar" /><published>2024-09-25T00:00:00+02:00</published><updated>2024-09-25T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic%20reconstruction%20of%20road%20surface%20features%20by%20using%20terrestrial%20mobile%20lidar</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic-reconstruction-of-road-surface-features-by-using-terrestrial-mobile-lidar/"><![CDATA[<p>对路面的重建（Lidar）</p>
 
 <p>a fully automatic approach for reconstructing
 road surface features based on the terrestrial mobile light detection and ranging (lidar) technique
@@ -891,52 +892,4 @@ REVOKE command removes user access rights or privileges to the database objects<
 <p>Cast操作是Melt的逆操作，它将数据从长格式转换回宽格式，通常涉及聚合操作。
 在这个例子中，没有直接展示Cast操作，但可以想象，如果想要将每个球员的平均得分重新转换为某种汇总形式（例如，每个球员的平均得分作为列而不是行），那么就可以使用Cast操作来实现。</p>
 
-<p>SQL weakness: loops</p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">SQL｜Lecture 4 Data Modeling Basic Structures</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/20/SQL-Lecture-4-Data-Modeliling-Basic-Strutures/" rel="alternate" type="text/html" title="SQL｜Lecture 4 Data Modeling Basic Structures" /><published>2024-04-20T00:00:00+02:00</published><updated>2024-04-20T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/20/SQL-Lecture%204%20Data%20Modeliling%20Basic%20Strutures</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/20/SQL-Lecture-4-Data-Modeliling-Basic-Strutures/"><![CDATA[<h1 id="chapter-7-how-to-model-and-design-a-database">Chapter 7 how to model and design a database</h1>
-<h1 id="data-modelling">Data Modelling</h1>
-<p>= the art of database design</p>
-<h2 id="find-out">Find out</h2>
-<p>which facts : things (entiy). keep what (attribute), model what might happen, how the facts link (relationship)</p>
-<h2 id="not">Not</h2>
-<p>process, data flow, experimental design</p>
-<h2 id="make-a-database-metadata">Make a database metadata</h2>
-<p>identify the facts to be stored in the database
-client and analysit</p>
-<h2 id="building-blocks">Building Blocks</h2>
-<p>entity
-attribute
-relationship
-identifiers
-(+ and frim’boss 是什么？)
-Q</p>
-<h2 id="aim-1-a-well-formed-data-model">Aim 1 a well formed data model</h2>
-<p>Construction rules obeyed
-No ambiguity</p>
-<h2 id="aim-2-a-high-fidelity-image">Aim 2 a high fidelity image</h2>
-<p>faithfully describes the world
-relationships
-data model is complete, understandable and accurate
-make sense</p>
-<h2 id="7-habits-of-highly-effective-data-modellers">7 habits of highly effective data modellers</h2>
-<p><img src="/images/posts/89dbf2d2857a9aeb9f5809da2b3896a.png" alt="" /></p>
-
-<h3 id="integrate">Integrate</h3>
-
-<p>more than one capital
-same name cities
-label these relationship</p>
-<h1 id="normalization">Normalization</h1>
-<p>Bottom-up
-Grouping the attributes in tables so that Every non-PK 
-attributes depends on 
-– the PK, 
-– the whole PK (if multi-attribute), 
-– and nothing but the PK</p>
-<h2 id="generalize">Generalize</h2>
-<p>man and woman can be generelized as person
-child /// single marriage</p>
-<h2 id="cardinality-and-modelity">Cardinality and Modelity</h2>
-<p>cardinality range of instances
-modelity participating instances
-<img src="/images/posts/23527af291d9e98d666491360623ec0.png" alt="" />
-<img src="/images/posts/a260e58eff2aaa7de24c1bb27931782.png" alt="" />
-<img src="/images/posts/51a4710dd4e60f33c54b7672c477211.png" alt="" /></p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry></feed>
+<p>SQL weakness: loops</p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry></feed>
