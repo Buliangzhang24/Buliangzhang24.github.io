@@ -6,7 +6,7 @@ url: https://buliangzhang24.github.io
 date_format: "ordinal"
 title: Xinyi He
 subtitle: Open to contact
-description: A GISer, Remote Sensing Lover and Point Cloud Processor
+description: "A GISer, Remote Sensing Lover and Point Cloud Processor"
 keywords: Xinyi He, GIS, Remote Sensing, LiDAR
 timezone: Europe/Amsterdam
 encoding: "utf-8"
@@ -118,11 +118,11 @@ index:
         # 首页导航栏文字颜色
         nav-color: "rgba(255, 255, 255, .7)"
         # 首页 banner 区背景颜色
-        background-color: "#f8c8dc"
+        background-color: "#4183c4"
         # 首页 banner 区背景图片
-        background-image: "/assets/images/octicons-bg.png"
-        background-repeat: "no-repeat"
-        background-size: "cover"
+       # background-image: "/assets/images/octicons-bg.png"
+       # background-repeat: "no-repeat"
+       # background-size: "cover"
 
 # ---------------- #
 #      Jekyll      #
