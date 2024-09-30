@@ -122,7 +122,7 @@ index:
         # 首页 banner 区背景图片
         background-image: "/assets/images/octicons-bg.png"
         #background-repeat: "no-repeat"
-        background-size: "contain"
+        background-size: "cover"
         #background-position: bottom
 
 # ---------------- #
