@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MachineLearning｜0. Introduction
-categories: [Advanced Earth Observation]
+categories: [MachineLearning]
 description: None
 keywords: Introduction
 mermaid: false
