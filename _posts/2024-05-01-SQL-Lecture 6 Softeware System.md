@@ -1,3 +1,17 @@
+---
+layout: post
+title: SQL｜Lecture 6 Softerware System
+categories: [SQL]
+description: None
+keywords: Softerware System
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
+
 § Describe the Role of Databases in Software Systems
 § Explain the features of managing data
 § Illustrate how SQL can be secured

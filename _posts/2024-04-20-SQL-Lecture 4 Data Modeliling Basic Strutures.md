@@ -1,3 +1,16 @@
+---
+layout: post
+title: SQL｜Lecture 4 Data Modeling Basic Structures
+categories: [SQL]
+description: None
+keywords: Data Modeling Basic Structures
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Chapter 7 how to model and design a database
 # Data Modelling 
 = the art of database design

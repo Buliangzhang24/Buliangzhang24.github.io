@@ -1,3 +1,16 @@
+---
+layout: post
+title: SQL｜Lecture 2 One-to-Many Relstionship
+categories: [SQL]
+description: None
+keywords: One-to-Many Relstionship
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Chapter 4: One-to-Many Relstionship
 Link multiple entities together
 Relationship between one instance of an entity to many  instances of another entity

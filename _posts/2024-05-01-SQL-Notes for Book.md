@@ -1,3 +1,16 @@
+---
+layout: post
+title: SQL｜Notes for Books
+categories: [SQL]
+description: None
+keywords: Notes for Books
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # The Managerial Perspective
 1 components of organizational memory and then discussing some of its common problems.
 2 the relationship between information and organizational goals

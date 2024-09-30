@@ -1,3 +1,16 @@
+---
+layout: post
+title: SQL｜Lecture 5 The Relation Model
+categories: [SQL]
+description: None
+keywords: The Relation Model
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 The relational model is a meta-model
 described as E-R model
 domain, intergrity and operators to retrieve, derive, modify data

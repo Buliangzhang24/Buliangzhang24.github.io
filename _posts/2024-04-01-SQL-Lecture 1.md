@@ -1,3 +1,17 @@
+---
+layout: post
+title: SQL｜Lecture 1
+categories: [SQL]
+description: None
+keywords: SQL
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
+
  project structure
  advanced topic: imporove data processing using DB, Link python program to manage DB server
 ## Information System

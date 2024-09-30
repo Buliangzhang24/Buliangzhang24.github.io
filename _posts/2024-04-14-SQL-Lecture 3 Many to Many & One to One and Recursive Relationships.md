@@ -1,3 +1,16 @@
+---
+layout: post
+title: SQL｜Lecture 3 Many-to-Many Relstionship
+categories: [SQL]
+description: None
+keywords: Many-to-Many Relstionship
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 ## What is Many to Many
 A sale includes many items
 An item can appear in many sales

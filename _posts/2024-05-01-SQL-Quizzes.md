@@ -1,3 +1,16 @@
+---
+layout: post
+title: SQL｜ Quizzes
+categories: [SQL]
+description: None
+keywords:  Quizzes
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Quizzes 1
 1. 一对多，哪个是FK？ The personid in CAR is the foreign key .
 2. 如果这个attribute只在一个表里出现，就不需要item.color了
