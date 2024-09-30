@@ -114,7 +114,7 @@ subscribe_rss: /feed.xml
 index:
     banner:
         # 首页 banner 区文字颜色
-        color: "#fff"
+        color: "#000"
         # 首页导航栏文字颜色
         nav-color: "rgba(255, 255, 255, .7)"
         # 首页 banner 区背景颜色
