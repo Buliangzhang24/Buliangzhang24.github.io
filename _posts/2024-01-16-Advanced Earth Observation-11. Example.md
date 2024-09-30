@@ -13,7 +13,7 @@ mindmap2: false
 ---
 ## Physical foundations
 **(a) Draw a (triangular) prism and then draw the path of a beam of light that enters at an incidence angle of 30 degrees, travels through the prism and leaves it at the opposite wall.**
-![[6b79016b130e7e212d52e31be2b2e50.png]]
+![](/images/posts/6b79016b130e7e212d52e31be2b2e50.png)
 **(b) Does red and blue light follow the same path? What is the reason for your 
 answer?**
 
@@ -33,12 +33,12 @@ snow are forward scatterers.**
 The complex internal structure of vegetation and the roughness of vegetation contributes to multiple scattering events, with the net result being a greater proportion of scattered light redirected backward.
 Water and snow, are typically smoother and have simpler structures.
 They tend to scatter light more evenly in all directions, including a significant proportion in the forward direction.
-![[8436cdff01a5873f3ad42f2965ed7d1.png]]
+![](/images/posts/8436cdff01a5873f3ad42f2965ed7d1.png)
 ## Time series analysis
 **One of the methods to study time series of satellite data is BFAST.
 Here you see three different NDVI time series of a pine forests in Australia 
 based on MODIS. Which processes (or changes) are visible in each of these time series of different forest areas?**
-![[b2c0b65710373122b731a77a40f95c7.png]]
+![](/images/posts/b2c0b65710373122b731a77a40f95c7.png)
 The first image shows two breaks, the first in early 2002 and the second in early 2006. Both changes have increased the NDVI value, indicating that plants are becoming healthier and more prosperous.
 The second graph shows a break at the end of 2004 and beginning of 2005, indicating a decrease in pine forest coverage, possibly due to logging. In early 2006, the NDVI value further decreased, but then it increased. By the end of 2008, the vegetation had almost recovered on its own
 The third graph shows a certain periodic change, with three breaks that decreased in 2002 and then increased, causing vegetation to recover slightly. In 2006, it also decreased and vegetation to recover slightly. It may be periodic logging.

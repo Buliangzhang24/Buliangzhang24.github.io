@@ -84,7 +84,7 @@ any flying object, including: Aircraft, Helicopter, Balloon, Kite, UAV
 Science of making reliable measurements by the use of photographs(size, shape, geographic positioning) Reconstructing the geometry of the photographed surface.
 ## Parallax>>原理
 a displacement or difference in the apparent position of an object viewed along two different lines of sight, and is measured by the angle of inclination between those two lines.
-![[b8e869d4d6711161d9eabb7af475080.png]]
+![](/images/posts/b8e869d4d6711161d9eabb7af475080.png)
 
 ## 立体视觉>>Overlapping Stereophotography
 ### What
@@ -110,7 +110,7 @@ Exterior orientation
 - ==Parallax shift determines altitude==
 ### Relief displacement
 
-![[7b6d25d05c063b9c96a78dec680064d.png]]
+![](/images/posts/7b6d25d05c063b9c96a78dec680064d.png)
 
 
 ## Maps vs. Aerial Photos地图和航拍的比较

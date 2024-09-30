@@ -15,18 +15,18 @@ mindmap2: false
 ## Preprocessing
 ### Creating a raster brick and cleaning the MODIS data using the reliability layer
 
-![[1b94187fb74ee2c86954e8c4ace7c4d.png]]
+![](/images/posts/1b94187fb74ee2c86954e8c4ace7c4d.png)
 ## Option 1: detect break at the end of the time series with BFAST Monitor
 Now we apply the `bfastmonitor` function using a `trend + harmon` model with `order 3` for the harmonics (i.e. seasonality modelling):
 ==Time of break==
 ==Magnitude of change plot==
-![[c1dafbc034e31272fb735b073f8e57c.png]]
-![[e28a818667594cb8ece45751357f876.png]]
+![](/images/posts/c1dafbc034e31272fb735b073f8e57c.png)
+![](/images/posts/e28a818667594cb8ece45751357f876.png)
 ## Option 2: detecting all breaks in the middle of a time series with BFAST Lite
 BFAST monitor用于检测时间序列末尾的第一个中断。如果您需要检测多个中断，则需要使用不同的算法：BFAST 或 BFAST Lite。
 让我们对前面步骤中的数据运行函数 `bfastlite()` 。与默认值 `LWZ` 相比，将参数 `breaks` 设置为 `BIC` 可以更自由地检测中断。
 ### Seasonality monitoring using harmonics
-![[8b399ad58af9a98c075c0fb76524140.png]]
+![](/images/posts/8b399ad58af9a98c075c0fb76524140.png)
 # PPT Part1
 ## 引言
 ### Why time series analysis?
@@ -111,7 +111,7 @@ find all breaks in the time series
 三个加起来是Time series
 #### BFAST principles
 
-![[2b8cafa4f612cc9cf15218c16206cee.png]]
+![](/images/posts/2b8cafa4f612cc9cf15218c16206cee.png)
 ##### (1).Decomposition 分解
 - using  stl() 
 - Season and Trend decomposition using LOESS (locally estimated scatterplot smoothing) into components
@@ -120,7 +120,7 @@ find all breaks in the time series
 - Optimise to minimise model’s residual sum of squares (RSS)（最小残差和）
 - Choose number of breaks based on Bayesian Information Criterion (BIC)（break的次数）>>>BIC越小，表示模型在拟合数据上的表现越好。在时间序列分析中，如果考虑断点的个数，可以尝试不同的断点数量，计算每个数量下的BIC值，然后选择BIC值最小的数量作为最优的断点数量。
 ##### Linear regression of seasonality: harmonics
-![[672e03439acfd840c1b8423158f2665.png]]
+![](/images/posts/672e03439acfd840c1b8423158f2665.png)
 This gives **all breaks** in the time series, separately for season and trend
 ### BFAST Lite
 ==updating historical land cover maps globally==

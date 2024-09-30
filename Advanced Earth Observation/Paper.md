@@ -1,4 +1,0 @@
-introduction
-problem statement
-research question
-method

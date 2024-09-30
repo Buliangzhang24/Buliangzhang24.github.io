@@ -34,7 +34,7 @@ Then, we will calculate the coherence, merge the bursts of the images, and geoco
 sin0.55 radians是0.55
 so ground range resolution是4.83
 4.83乘5= 24.15是 ground range resolution when window size(range)=5
-![[8c8c763668950cfab7b61b8bf96ecda.png]]
+![](/images/posts/8c8c763668950cfab7b61b8bf96ecda.png)
 ### 为什么比例是5
 （The ratio between the range and azimuth window sizes is approximately 5 for all multilooking and coherence estimation windows used in this exercise）
 为了正方形
@@ -60,7 +60,7 @@ Whereas agricultural fields, when the crops are growing, won't change in appeara
 For 2014, the temperature was below 0 (-8.9 degrees Celsius) which means freezing condition. The icy surfaces have lower dialectic properties, resulting in lower backscatter. The dialectic constant shows a drop under the freezing conditions. 
 
 Whereas in 2022 the temperature was higher than 0(4.1 degrees Celsius), resulting in higher backscatter. 
-![[603b8492c0a44a825bfebead9631bd6.png]]
+![](/images/posts/603b8492c0a44a825bfebead9631bd6.png)
 # PPT
 ## What ?: mass of living and dead organic matter 
 - Essential Climate Variable
@@ -95,7 +95,7 @@ ground inventory density >> latitude 0 >> almost 0 >> inassessable
 - complex processing
 - non-intuitive非直觉的 and ambiguous image interpretation
 ## AGB estimation from SAR
-![[fa3c5f47cee1660b0971f2a873ba9ac.png]]
+![](/images/posts/fa3c5f47cee1660b0971f2a873ba9ac.png)
 - Reference AGB data are essential for AGB estimation (参考AGB数据对于AGB估计是必不可少的)
 - 两种方式去explore AGB data 就是Backscatter 和interferometry
 - More accurate monitoring is needed, especially in the tropics, for a long list of applications
@@ -173,7 +173,7 @@ Flat test site>> moisture//sensitivity
 3. **Interferometric processing:** estimation of coherence magnitude and phase
 4. **Geolocation:** interpolation to map geometry几何插值
 ### Complex coherence复数相干性
-![[79b9bf393e2d55064198779161cd1d4.png]]
+![](/images/posts/79b9bf393e2d55064198779161cd1d4.png)
 ### Three main decorrelation effects
 - Spatial decorrelation(different viewing geometries)
 - System decorrelation(SAR system imperfections & thermal noise)
@@ -194,7 +194,7 @@ Biased estimator → overestimation(高估) for low 𝑛 and/or low-coherence ta
 优点unbiased 
 但是 standard deviation取决于target coherence, 2pi ambiguities
 ##### interferometric phase components
-![[b5b2c2b10a7e07979238a7a223433c1.png]]
+![](/images/posts/b5b2c2b10a7e07979238a7a223433c1.png)
 - Flat Earth phase(可消除): incidence angle variability from near- to far-range近端远端
 - Topographic phase: Terrain elevation above “flat Earth” model 凹凸不平
 - Contribution of volume scattering: Volume scattering above terrain 树

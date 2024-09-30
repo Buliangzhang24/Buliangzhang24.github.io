@@ -81,7 +81,7 @@ Using the simulated spectrum with LAI = 0.0 and soil brightness = 0.5, assuming 
 4. WDVI values are lower for LAI = 0.5 compared to LAI = 4.0, because higher values of WDVI equal to denser vegetation。
 5. The WDVI value increases with greater values for soil brightness, because the dry soil reflects higher the NIR spectrum.
 ## Part 4(BRDF双向反射分布函数)
-![[ba3bb73a81727c3dfb799e66b6bdbcd.png]]
+![](/images/posts/ba3bb73a81727c3dfb799e66b6bdbcd.png)
 上面的大图
 On top we see a so-called polar plot, showing the BRF for all combinations of ==view 
 zenith and azimuth angles== at the set solar zenith angle. Bottom left we see a BRF 
@@ -115,8 +115,7 @@ The larger solar zenith angle, wider the hotspot range is in the viewing angle o
  The more Hotspot values ,the broader VZA range. 
  Psi 通常指逆向散射函数（Backscattering Function）。逆向散射函数描述了在反射方向上相对于入射方向的辐射强度。
 ### Principal Plane and Cross Principal Plane
-
-![[db573e3318d3cb05f61de5bc455ccb6.png]]
+![](/images/posts/db573e3318d3cb05f61de5bc455ccb6.png)
 
 1. On the principal plane, the illuminated area by the sun is located, with a peak in BRF for the hotspot which can be observed from the vertical zenith angle by the sensor. 
 2. On the cross-principal plane the BRF on viewing plane is plotted, illumination on both sides of the sensor.
@@ -128,7 +127,7 @@ The value of VZA of the hotspot is always negative, which is clockwise, because 
 ## Radiative Transfer Equation
 ### two factors : loss and gain
 extinction coefficient of a medium  scattering Probability /Radiance of direction
-![[daf0bb5b8158f61b0b965c955d83e09.png]]
+![](/images/posts/daf0bb5b8158f61b0b965c955d83e09.png)
 ## Scattering properties of soils 
 is affected by 3 factors
 #### 1. soil moisture content
@@ -139,7 +138,7 @@ is affected by 3 factors
 #### 3. soil surface roughness
 ## Soil spectral signature
 MARMIT soil reflectance model>>亮度和湿度
-![[97b39272ed78ca9d3ebdb93f6e1acdd.png]]
+![](/images/posts/97b39272ed78ca9d3ebdb93f6e1acdd.png)
 ## Leaves
 ### Scattering properties of leaves
 折射系数（refractive index）
@@ -148,8 +147,7 @@ MARMIT soil reflectance model>>亮度和湿度
 Beer-Lambert law: there is an exponential extinction function指数消光函数, the deeper you go the more will be absorbed and that's an e power, an exponent by multiplying this absorption coefficient times the distance that is being traveled in some materials.
 
 ### ==PROSPECT model==
-
-![[15b0a37f93060f9cd9d7406eb97d862.png]]
+![](/images/posts/15b0a37f93060f9cd9d7406eb97d862.png)
 #### Forward Mode(转换模式)
 ##### Input: 
 - N：leaf structure parameter (optical shickness)
@@ -165,7 +163,7 @@ Sensitivity: 400 >>> 为什么是在lab里？
 因为not outside( water vapor in the atmosphere blocks almost all radiation coming to the earth)
 ### SAIL (scattering properties of canopy)
 Leaf reflectance and transmittance can be obtained as output from the PROSPECT model.
-![[2ff4f48e659cf7478117d3a03c7c88c.png]]
+![](/images/posts/2ff4f48e659cf7478117d3a03c7c88c.png)
 ##### Case considered(3个因素): 有点像假设的前提
 ● horizontally infinite but vertically finite plane parallel medium (air) embedded with infinitesimal oriented scattering objects at low density
 ● canopy lies over soil surface (lower boundary)
@@ -182,7 +180,7 @@ erectophile: 垂直 horizontal
 planophile：水平 vertical
 spherical：球形
 ## Observation Geometry
-![[bcd1608030949f86c6769d6b18d1d78.png]]
+![](/images/posts/bcd1608030949f86c6769d6b18d1d78.png)
 tts: solar zenith angle (天顶角)(with vertical/nadir)
 tto: observer zenith angle （观察顶角）
 psi: relative azimuth angle(方位角)
@@ -197,7 +195,7 @@ psi: relative azimuth angle(方位角)
 左:后向散射(太阳在观察者后面);注意所有阴影被隐藏的明亮区域(热点)。
 右:前向散射(太阳对面观测者);注意树木的阴影中心和通过树冠边缘的光透射。
 ## BRDF(Bidirectional Reflectance Distribution Function)
-![[e3f3c19810db25086c1ce0ea9fbf2f8.png]]
+![](/images/posts/e3f3c19810db25086c1ce0ea9fbf2f8.png)
 ## Measurements-Sampling techniques抽样
 ### Sampling goal
 High number of illumination and viewing angles

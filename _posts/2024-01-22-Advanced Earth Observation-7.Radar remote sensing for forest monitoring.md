@@ -66,7 +66,7 @@ optical vs radar, Side-looking airborne radar, radar geometry, ascending and des
 ● The polarization
 ● The incidence angle
 ### Surface scattering
-![[2f4f0e61b7d8e2fae60e8ccfc56b913.png]]
+![](/images/posts/2f4f0e61b7d8e2fae60e8ccfc56b913.png)
 The moisture content (**dielectric constant**) of the medium governs the strength of the backscatter
 #### Surface roughness
 Shell's  law
@@ -76,7 +76,7 @@ Complex dielectric Constant (ε)
 -  ratio of the permittivity（介电常数） of a material to the permittivity of free space 自由空间的介电常数和材料的介电常数相比
 -  In other words: indicator of the ==reflectivity of a material==
 -  ==increasing ε leads to increasing backscatter==
-![[b7f5649cce5b0c06f980117839480fc.png]]
+![](/images/posts/b7f5649cce5b0c06f980117839480fc.png)
 ##### 例子
 - 介电常数的波动(fluctuation)
     Water is purple, because the wave of the water >> wind
@@ -90,7 +90,8 @@ Complex dielectric Constant (ε)
 - ==Main source of VH and HV scattering==
 - Increasing backscatter with increasing dielectric constant
 #### Depolarization
-![[c80d4cfd88d6dba18df1ef4b008ef05.png]]![[6475e0d229f88d477968906958ce2da.png]]
+![](/images/posts/c80d4cfd88d6dba18df1ef4b008ef05.png)
+![](/images/posts/6475e0d229f88d477968906958ce2da.png)
 - Change in the orientation of the electric field during a reflection with curved scatters' such as disc or cylinders 圆柱体
      弯曲散射体(如圆盘或圆柱体)反射时电场方向的变化。
 - **Mainly occurs due to multiple scattering**

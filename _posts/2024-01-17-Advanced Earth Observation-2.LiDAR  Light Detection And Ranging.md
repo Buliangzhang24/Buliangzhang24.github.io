@@ -67,7 +67,7 @@ In the difference plot the values around steep slopes within short distance are 
 ### CHM Creation
 **CHM gives absolute height **
 #### Different algorithms
-![[c9aa2fa3d0cae8a423f07abbef4826d.png]]
+![](/images/posts/c9aa2fa3d0cae8a423f07abbef4826d.png)
 
 ### Simple Terrain Correction
 #### Gap fraction: Gap fraction is defined as the fraction of sky visible through the canopy
@@ -104,10 +104,10 @@ Overall, the relation is weak, because of differences in growth stages and betwe
 Distance to an object = speed x time
 Distance = c* t/2
 ### MTA multiple time amplitude(between two Pulse)
-![[df401421d2f5c95554785745f36e508.png]]
+![](/images/posts/df401421d2f5c95554785745f36e508.png)
 ### Phase(Continuous beam of laser radiation instead of a pulse)
 match the two signals(match the transmitted and received version of sin waves)
-![[8f2d330bcfca84b3c8e861afd1d6c2b.png]]
+![](/images/posts/8f2d330bcfca84b3c8e861afd1d6c2b.png)
 
 ## Types of LiDAR systems
 ### Different Types of Platform
@@ -120,12 +120,12 @@ match the two signals(match the transmitted and received version of sin waves)
 - INS inertial Navigation System惯性导航系统
 Typically mirror scanning
 ### Airborne LiDAR
-![[e1940cff28fe3088ec46964d7f108ce.png]]
+![](/images/posts/e1940cff28fe3088ec46964d7f108ce.png)
 multiple pulse /echos
 glass double bonce back>>> black
 #### GEDI: Now in space
 ### Discrete(single or multiple returns) and waveform
-![[fb1537f0ba1a72108afed5d43a508ef.png]]
+![](/images/posts/fb1537f0ba1a72108afed5d43a508ef.png)
 
 
 ### Beam Divergence发散度

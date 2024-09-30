@@ -105,7 +105,7 @@ depends on the objective and requirement
     Mean error (ME)
 #### Discrete
 Confusion Matrix(all inclusion probability)
-![[3fff594d669cb908a15de56e7cb2f49.png]]
+![](/images/posts/3fff594d669cb908a15de56e7cb2f49.png)
 
 Overall accuracy= TP+TN/(TP+TN+FP+FN)
 User's accuracy= TP/(TP+FP)

@@ -42,7 +42,7 @@ Emissivity correction will increase recorded temperature values of both vegetati
 - theoretical using surface energy balance equation
 -  empirical using field measurements to establish a relationship between canopy-to-air temperature difference and vapor pressure deficit
 -  **image-based that establishes the baselines based only on the canopy temperature readings**(in practical)
-![[734d092e3c56ffe501ae079e29305a3.png]]
+![](/images/posts/734d092e3c56ffe501ae079e29305a3.png)
 
 CWSI = 0: no water stress
 CWSI = 1: severe drought(Tc equals to Tdry)
@@ -97,7 +97,7 @@ Terrestrial surfaces do not act as true blackbodies, emitting only a percentage 
 Kirchoff’s radiation law: ==reflectance + emissivity + transmissivity= 1==
 问题: B higher emissivity >>brighter
 #### Emissivity Correction
-![[f5a33498df1341a10eac2c20a85a8f4.png]]
+![](/images/posts/f5a33498df1341a10eac2c20a85a8f4.png)
 K= 摄氏度+273.15
 where Trad is radiant temperature. Tkin is kinetic temperature, ɛ is surface emissivity for the given spectral range.
 #### Emissivity Value depends on
