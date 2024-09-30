@@ -1,6 +1,15 @@
 ---
 layout: post
-author: Xinyi He
+title: CrouseNote｜Radiative Transfer Modelling
+categories: [CrouseNote]
+description: None
+keywords: Radiative Transfer Modelling
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
 ---
 
 # 1.Radiative Transfer Modelling
