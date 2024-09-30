@@ -4,9 +4,9 @@
 baseurl:
 url: https://buliangzhang24.github.io/
 date_format: "ordinal"
-title: Xinyi He Personal Website
-subtitle: "Open to contact"
-description: "A GISer, Remote Sensing Lover and Point Cloud Processor"
+title: Xinyi He
+subtitle: Open to contact
+description: A GISer, Remote Sensing Lover and Point Cloud Processor
 keywords: Xinyi He, GIS, Remote Sensing, LiDAR
 timezone: Europe/Amsterdam
 encoding: "utf-8"
