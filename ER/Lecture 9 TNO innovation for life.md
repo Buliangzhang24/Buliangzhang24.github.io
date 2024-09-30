@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜Lecture 9 tno innovation for life
-categories: [RemoteSensing]
-description: None
-keywords:  tno innovation for life
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 # Social XR 
 spatial presence
 social presence

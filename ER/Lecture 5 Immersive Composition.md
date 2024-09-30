@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜ Lecture 5 immersive composition
-categories: [RemoteSensing]
-description: None
-keywords:  immersive composition
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 # Recap
 Animation considerations
 Inverse-Kinetics

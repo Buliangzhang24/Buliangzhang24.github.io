@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜ Lecture 3 immersive technologies
-categories: [RemoteSensing]
-description: None
-keywords:  immersive technologies
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 # Why it so important
 Fundamentally different from other media
 Feels like you are in a different place

@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜Lecture 10 evaluating immersive experiences
-categories: [RemoteSensing]
-description: None
-keywords:  evaluating immersive experiences
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 ## Crucial Skill in Education
 ### 4Rs
 reading

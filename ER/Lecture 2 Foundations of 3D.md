@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜ Lecture 2 foundations of 3d
-categories: [RemoteSensing]
-description: None
-keywords:  foundations of 3d
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 # Introduction
 design,blueprints, 3D modelling, game engine, VR/XR
 # Part 1 Softwave Types

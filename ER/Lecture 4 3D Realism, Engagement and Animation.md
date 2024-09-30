@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜ Lecture 4 3d realism, engagement and animation
-categories: [RemoteSensing]
-description: None
-keywords:  3d realism, engagement and animation
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 # Part 1 Creating Realism
 ## XR Realism
 3D environment: 3D Assets, Particle Effects, Lighting/Lights, Animations, Texturing/ Materials

@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜Exam
-categories: [RemoteSensing]
-description: None
-keywords:  Exam
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 # What are major events in the development of XR both theoretical and practical
 ### History
 plato 'cave

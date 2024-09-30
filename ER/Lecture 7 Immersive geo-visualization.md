@@ -1,16 +1,3 @@
----
-layout: post
-title: RemoteSensing｜Lecture 7 immersive geo Visualization
-categories: [RemoteSensing]
-description: None
-keywords:  immersive geo Visualization
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
----
 ### Sense of Place
 ## GEO as a place-based theme
 Informal
