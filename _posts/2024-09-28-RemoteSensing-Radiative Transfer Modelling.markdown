@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CrouseNote｜Radiative Transfer Modelling
-categories: [CrouseNote]
+title: RemoteSensing｜Radiative Transfer Modelling
+categories: [RemoteSensing]
 description: None
 keywords: Radiative Transfer Modelling
 mermaid: false
