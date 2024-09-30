@@ -525,6 +525,22 @@
     } ,
   
     {
+      "title"    : "CV",
+      "category" : "",
+      
+      "url"      : "https://buliangzhang24.github.io/wiki/2024-09-30-CV/",
+      "keywords" : "CV"
+    } ,
+  
+    {
+      "title"    : "Wiki Template",
+      "category" : "",
+      
+      "url"      : "https://buliangzhang24.github.io/wiki/template/",
+      "keywords" : "keyword1, keyword2"
+    } ,
+  
+    {
       "title"    : "Fragment Template",
       "category" : "",
       
