@@ -1,19 +1,18 @@
 - name: Software Engineer Keywords
   keywords:
-      - Java
-      - C++
+      - R
+      - C
       - Python
-      - Design Patterns
+      - SQL
 
-- name: Mobile Developer Keywords
+- name: Remote Sensing & GIS Software Keywords
   keywords:
-      - Android
-      - Reverse Engineering
+      - ENVI
+      - ERDAS IMAGINE
+      - ArcGIS
+      - QGIS
 
-- name: Windows Developer Keywords
+- name: Other Keywords
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - Unity
+
