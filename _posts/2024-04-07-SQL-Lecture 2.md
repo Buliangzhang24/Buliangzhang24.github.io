@@ -30,16 +30,16 @@ a diagram is not a table. It's a story with relations.
 the difference between the 1:1 and 1:m
 - label(relationship descriptor)
 ### FK and PK
-are both a column or ==collection of columns==
+are both a column or collection of columns
 ### Could PK use multiple attributes?
 Yes
 PRIMARY KEY(stkcode, stkfirm)
 ## Query on 1:m(How to use these)
 ### Join
 step1: combine all the rows
-==SELECT * FROM(就是选择了所有的rows) Table1 , Table2;==
+SELECT * FROM(就是选择了所有的rows) Table1 , Table2;
 step2: restrict the values of some columns
-==WHERE Table1.ID +100 =Table2.ID;==
+WHERE Table1.ID +100 =Table2.ID;
 
 SELECT * FROM stock JOIN nation
 ON stock.natcode = nation.natcode;
@@ -47,7 +47,7 @@ not only equal, but other operation
 (显式连接)
 
 这个Query是错的，为什么？
-SELECT natname, ==natcode==, stkfirm, stkprice, stkqty, exchrate, stkprice*stkqty*exchrate AS stkvalue  
+SELECT natname, natcode, stkfirm, stkprice, stkqty, exchrate, stkprice*stkqty*exchrate AS stkvalue  
 FROM stock, nation  
 WHERE stock.natcode = nation.natcode
 (隐式连接)
@@ -58,12 +58,12 @@ SELECT natcode, COUNT(natcode) FROM stock
 WHERE stkprice >10
 GROUP BY natcode;
 #### Group by可以用于两个columns， 把两个columns都当做new table的PK来进行分类
-![[64330f7bb4f6a7b968e385fd97f9f1b.png]]
+![](/images/posts/64330f7bb4f6a7b968e385fd97f9f1b.png)
 ### Having
 SELECT natname, SUM(stkprice*stkqty*exchrate) AS stkvalue  
 FROM stock, nation WHERE stock.natcode = nation.natcode  
-==GROUP BY natname  
-HAVING COUNT( * ) > 2==
+GROUP BY natname  
+HAVING COUNT( * ) > 2
 ## View of Database
 for different people give them different tables
 Beneifits:
@@ -72,7 +72,7 @@ save memory space
 simplify query writing
 
 就是创建了一个新表
-CREATE ==VIEW== stkvalue (nation, firm, price, qty, exchrate, value)  
+CREATE VIEW stkvalue (nation, firm, price, qty, exchrate, value)  
 AS  
 SELECT natname, stkfirm, stkprice, stkqty, exchrate, stkprice*stkqty*exchrate  
 FROM stock, nation  
@@ -92,5 +92,5 @@ that country : we don't know the compony belong to which coutry
 SELECT natname, stkfirm, stkqty FROM stock, nation  
 WHERE stock.natcode = nation.natcode  
 AND stkqty >  
-==(SELECT avg(stkqty) FROM stock  
-WHERE stock.natcode = nation.natcode)==
+(SELECT avg(stkqty) FROM stock  
+WHERE stock.natcode = nation.natcode)

@@ -37,7 +37,7 @@ relationships
 data model is complete, understandable and accurate
 make sense
 ## 7 habits of highly effective data modellers
-![[89dbf2d2857a9aeb9f5809da2b3896a.png]]
+![](/images/posts/89dbf2d2857a9aeb9f5809da2b3896a.png)
 
 ### Integrate
 
@@ -57,7 +57,6 @@ child /// single marriage
 ## Cardinality and Modelity
 cardinality range of instances
 modelity participating instances
-![[23527af291d9e98d666491360623ec0.png]]
-
-![[a260e58eff2aaa7de24c1bb27931782.png]]
-![[51a4710dd4e60f33c54b7672c477211.png]]
+![](/images/posts/23527af291d9e98d666491360623ec0.png)
+![](/images/posts/a260e58eff2aaa7de24c1bb27931782.png)
+![](/images/posts/51a4710dd4e60f33c54b7672c477211.png)

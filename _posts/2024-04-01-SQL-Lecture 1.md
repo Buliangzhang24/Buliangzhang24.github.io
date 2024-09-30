@@ -59,7 +59,7 @@ ORDER BY
 SELECT
 FROM
 
-WHERE: SELECT * FROM share ==WHERE== shrpe <12 ==and== shrpe >8
+WHERE: SELECT * FROM share WHERE shrpe <12 and shrpe >8
 GROUP BY
 ORDER BY
 ### Order by
@@ -68,23 +68,23 @@ WHERE shrpe >= 10
 ORDER BY shrpe DESC(从大到小), shrfirm ASC;
 ### Update
 UPDATA share
-==SET ==shrfirm = ' Canadian Super Sugar'
-==WHERE== shrcode = 'CS'
+SET shrfirm = ' Canadian Super Sugar'
+WHERE shrcode = 'CS'
 ### Delete
-==DELETE FROM== share
-==WHERE== shrcode = 'BS'
+DELETE FROM share
+WHERE shrcode = 'BS'
 (we can just use the primary key)
 ### Expressions
-SELECT shrfirm, shrprice, shrqty, ==shrdiv/shrprice* 100 AS yield==
+SELECT shrfirm, shrprice, shrqty, shrdiv/shrprice* 100 AS yield
 FROM share;
 
 SELECT AVG(shrdiv) AS avgdiv
 FROM share;
 the calculation result is always table
 #### Regular Expressions
-SELECT * FROM nation WHERE natnamae ==REGEXP== 'ni'
+SELECT * FROM nation WHERE natnamae REGEXP 'ni'
 #### Wildcard
-SELECT shrfirm FROM share WHERE shrfirm ==REGEXP 'Geese$'==(at the end of the string)
+SELECT shrfirm FROM share WHERE shrfirm REGEXP 'Geese$'(at the end of the string)
 ^ : begining of string
 REGEXP '[KD]'
 

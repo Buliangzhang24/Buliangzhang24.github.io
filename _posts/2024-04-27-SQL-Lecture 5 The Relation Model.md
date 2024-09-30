@@ -37,12 +37,13 @@ Shorthand for multiple OR conditions
 
 JOIN
 INNER JOIN
-![[e5062a920fff6aa6dc6dca4b4828f26.png]]
+![](/images/posts/e5062a920fff6aa6dc6dca4b4828f26.png)
 Group By
 aggregate functions: COUNT(), MAX(), MIN(), SUM(), AVG()
 ## SQL Routines
 RETURNS
-![[dade562868293319f3aef8d959967b3.png]]
+![](/images/posts/dade562868293319f3aef8d959967b3.png)
+
 ## Triggers
 这是在讲SQL中的触发器。触发器是一种特殊类型的存储过程，它会在表上发生特定事件时自动执行，比如插入、更新或删除行。
 

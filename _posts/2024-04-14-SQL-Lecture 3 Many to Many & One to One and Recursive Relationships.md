@@ -23,8 +23,8 @@ PK are saleno and lineno or itemno
 List all items that 
 A) were sold on 1995-01-16, or B) are brown
 比OR多了一个unique
-==They are same.==
-![[c873212748e2587151b5f2fadd9515a.png]]
+They are same.
+![](/images/posts/c873212748e2587151b5f2fadd9515a.png)
 UNION doesn't check the information is logical or not,just put them together
 ## INTERSECT
 List all items that A) were sold on 1995-01-16, and B) are brown
@@ -34,7 +34,7 @@ SELECT itemname FROM item_w, lineitem, sale
 WHERE item_w.itemno = lineitem.itemno  
 AND lineitem.saleno = sale.saleno  
 AND saledate = "1995-01-16"  
-==INTERSECT  ==
+INTERSECT 
 SELECT itemname FROM item WHERE itemcolor = 'Brown’;
 ## IN (replace INTERSECT in MySQL)
 
@@ -42,7 +42,7 @@ SELECT itemname FROM item_w, lineitem, sale
 WHERE item_w.itemno = lineitem.itemno  
 AND lineitem.saleno = sale.saleno  
 AND saledate = "1995-01-16“  
-==AND itemname IN  ==
+AND itemname IN 
 (SELECT itemname FROM item WHERE itemcolor = 'Brown');
 ## EXISTS
 ## NOT EXISTS
@@ -54,7 +54,7 @@ return 20
 Find instance from one table that are in every instance of another table
 ### Template
 target sources target-source
-![[9474b1ed799913ba6158606e180a393.png]]
+![](/images/posts/9474b1ed799913ba6158606e180a393.png)
 # Chapter 6: One-to-One and Recursive Relatioships
 ## What is recursive?
 An entity is part of another entity
@@ -65,4 +65,4 @@ REFERENCES is table itself
 PRIMARY KEY(empno),  
 CONSTRAINT fk_has_boss foreign key (bossno) REFERENCES emp(empno));
 ## JOIN
-![[570dcfb14d5a1199061480cd4723656.png]]
+![](/images/posts/570dcfb14d5a1199061480cd4723656.png)

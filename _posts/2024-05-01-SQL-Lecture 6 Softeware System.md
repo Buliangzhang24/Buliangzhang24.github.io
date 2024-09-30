@@ -78,12 +78,12 @@ GDPR compliance requirements
 
 Create Log files of errors and update Table
 ## Built-in Function
-![[45bc9ee2512584f83035e86e05de108.png]]
-![[03f6dca10ff2dd1758398a1608fae8f.png]]
-![[f1b69c078eb17d0ba403e0d3e9202d7.png]]
-![[e6224fa3804724270d6fed3be3edbc3.png]]
+![](/images/posts/45bc9ee2512584f83035e86e05de108.png)
+![](/images/posts/03f6dca10ff2dd1758398a1608fae8f.png)
+![](/images/posts/f1b69c078eb17d0ba403e0d3e9202d7.png)
 
-![[081f768577c05545ce0dd04f90547a0.png]]
+![](/images/posts/081f768577c05545ce0dd04f90547a0.png)
+
 ## SQL Errors
 syntax errors语法错误
 semantic errors语义错误
