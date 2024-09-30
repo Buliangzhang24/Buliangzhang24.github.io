@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜ Notes2
+categories: [MachineLearning]
+description: None
+keywords: Notes
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # W3L1 Unsupervised learning
 ## Lab
 ### PCA

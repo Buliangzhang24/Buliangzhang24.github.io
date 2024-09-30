@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜7.Decision Tree to Random Forests
+categories: [MachineLearning]
+description: None
+keywords: Decision Tree to Random Forests
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Decision Trees
 We categorize data through <mark class="hltr-orange">chain of simple decisions.</mark>
 <mark class="hltr-orange">a binary tree,</mark> which is a graph data structure in which each node has at most two children

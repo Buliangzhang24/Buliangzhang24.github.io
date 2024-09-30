@@ -1,3 +1,17 @@
+---
+layout: post
+title: MachineLearning｜5. Resampling methods
+categories: [MachineLearning]
+description: None
+keywords: Resampling methods
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
+
 # Motivation
 ## Bias and Variance
 ### Prediction errors are due to

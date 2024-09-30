@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜3.Logistic Regression
+categories: [MachineLearning]
+description: None
+keywords: Logistic Regression
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 used for classification
 # Motivation
 - linear regression

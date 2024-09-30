@@ -1,3 +1,17 @@
+---
+layout: post
+title: MachineLearning｜1. Statistical learning
+categories: [MachineLearning]
+description: None
+keywords: Statistical learning
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
+
 Y= f(X)+e
 <mark class="hltr-yellow"> Y: (response, dependent variable, predicted value) </mark>
   <mark class="hltr-yellow">X: (predictor,independent variable,feature)</mark>

@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜10. Un-K-means,mixture-of-Gaussians and self-organizing maps
+categories: [MachineLearning]
+description: None
+keywords: Un-K-means,mixture-of-Gaussians and self-organizing maps
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 ## Clustering methods--Hierarchical
 - dissimilarity matrix(cluster)dengrogram(cut)clustering
 - bottom-up or agglomerative(as opposed to top-down or divisive)

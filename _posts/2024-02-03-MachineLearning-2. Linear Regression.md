@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜2. Linear Regression
+categories: [MachineLearning]
+description: None
+keywords: Linear Regression
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Simple linear regression
 ## assume a model : (Y≈β_0+β_1X)
 β ̂0intercept

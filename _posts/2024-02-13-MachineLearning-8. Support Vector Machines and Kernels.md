@@ -1,4 +1,16 @@
-
+---
+layout: post
+title: MachineLearning｜8. Support Vector Machines and Kernels
+categories: [MachineLearning]
+description: None
+keywords: Support Vector Machines and Kernels
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 ![[cd673ddf50ef87de550f7a2cba69a53.png]]
 # Separating Hyperplanes
 - when you want to find a decision boundary, avoid estimating densities

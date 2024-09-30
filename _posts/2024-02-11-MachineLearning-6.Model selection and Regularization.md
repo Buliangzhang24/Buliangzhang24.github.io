@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜6.Model selection and Regularization
+categories: [MachineLearning]
+description: None
+keywords: Model selection and Regularization
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Motivation 
 - prediction accuracy
     avoid overfitting 特别是p>n 的时候，就是变量大于样本量

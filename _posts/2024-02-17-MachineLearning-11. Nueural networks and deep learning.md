@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜11. Nueural networks and deep learning
+categories: [MachineLearning]
+description: None
+keywords: Nueural networks and deep learning
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Neurons and gradient descent
 - Neural nets are <mark class="hltr-yellow">interconnected networks</mark> of simple processing units, a.k.a neurons
 - It remains just a parallel, the artificial neuron is just an approximation!

@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜ ExamNotes2
+categories: [MachineLearning]
+description: None
+keywords: Exam
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 1. F>>T Adding more variables to a model will most likely decrease the training errors  增加P,会减少training errors
 2. T K=n应该是最少bias
 3. ? T>>F Adding more data in the training set will likely decrease the total sum of squares (TSS) 不变  增加n，TSS不变

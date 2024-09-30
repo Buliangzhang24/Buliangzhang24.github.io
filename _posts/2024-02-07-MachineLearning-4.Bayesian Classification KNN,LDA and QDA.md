@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜4.Bayesian Classification KNN,LDA and QDA
+categories: [MachineLearning]
+description: None
+keywords:Bayesian Classification KNN,LDA and QDA
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 KNN,LDA and QDA are Bayesian classification
 ## Classification
 Finding class k that maximizing the conditional probability

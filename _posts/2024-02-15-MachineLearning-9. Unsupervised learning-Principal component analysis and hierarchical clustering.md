@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜9. Unsupervised learning-Principal component analysis and hierarchical clustering
+categories: [MachineLearning]
+description: None
+keywords: Unsupervised learning-Principal component analysis and hierarchical clustering
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 ## supervised learning 的缺点：
 - little labelled data available
 - generating labels is expensive

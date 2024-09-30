@@ -1,3 +1,16 @@
+---
+layout: post
+title: MachineLearning｜ Notes1
+categories: [MachineLearning]
+description: None
+keywords: Notes
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Sampling Methods and Model Selection
 # 8 Cross-Validation
 1. 生成数据集
