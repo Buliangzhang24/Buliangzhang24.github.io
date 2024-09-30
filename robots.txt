@@ -1,4 +1,1 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://alshedivat.github.io/al-folio/sitemap.xml
+Sitemap: https://buliangzhang24.github.io/pages/Buliangzhang24/sitemap.xml

@@ -1,105 +1,942 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://alshedivat.github.io/al-folio/feed.xml" rel="self" type="application/atom+xml"/><link href="https://alshedivat.github.io/al-folio/" rel="alternate" type="text/html" hreflang="en"/><updated>2023-10-31T19:12:35+00:00</updated><id>https://alshedivat.github.io/al-folio/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">a post with bibliography</title><link href="https://alshedivat.github.io/al-folio/blog/2023/post-bibliography/" rel="alternate" type="text/html" title="a post with bibliography"/><published>2023-07-12T13:56:00+00:00</published><updated>2023-07-12T13:56:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/post-bibliography</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/post-bibliography/"><![CDATA[<p>This post shows how to add bibliography to simple blog posts. If you would like something more academic, check the <a href="/al-folio/blog/2021/distill/">distill style post</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="bib"/><summary type="html"><![CDATA[an example of a blog post with bibliography]]></summary></entry><entry><title type="html">a post with jupyter notebook</title><link href="https://alshedivat.github.io/al-folio/blog/2023/jupyter-notebook/" rel="alternate" type="text/html" title="a post with jupyter notebook"/><published>2023-07-04T12:57:00+00:00</published><updated>2023-07-04T12:57:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/jupyter-notebook</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/jupyter-notebook/"><![CDATA[<p>To include a jupyter notebook in a post, you can use the following code:</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{::nomarkdown}
-{% assign jupyter_path = "assets/jupyter/blog.ipynb" | relative_url %}
-{% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
-{% if notebook_exists == "true" %}
-    {% jupyter_notebook jupyter_path %}
-{% else %}
-    <span class="nt">&lt;p&gt;</span>Sorry, the notebook you are looking for does not exist.<span class="nt">&lt;/p&gt;</span>
-{% endif %}
-{:/nomarkdown}
-</code></pre></div></div> <p>Let’s break it down: this is possible thanks to <a href="https://github.com/red-data-tools/jekyll-jupyter-notebook">Jekyll Jupyter Notebook plugin</a> that allows you to embed jupyter notebooks in your posts. It basically calls <a href="https://nbconvert.readthedocs.io/en/latest/usage.html#convert-html"><code class="language-plaintext highlighter-rouge">jupyter nbconvert --to html</code></a> to convert the notebook to an html page and then includes it in the post. Since <a href="https://jekyllrb.com/docs/configuration/markdown/">Kramdown</a> is the default Markdown renderer for Jekyll, we need to surround the call to the plugin with the <a href="https://kramdown.gettalong.org/syntax.html#extensions">::nomarkdown</a> tag so that it stops processing this part with Kramdown and outputs the content as-is.</p> <p>The plugin takes as input the path to the notebook, but it assumes the file exists. If you want to check if the file exists before calling the plugin, you can use the <code class="language-plaintext highlighter-rouge">file_exists</code> filter. This avoids getting a 404 error from the plugin and ending up displaying the main page inside of it instead. If the file does not exist, you can output a message to the user. The code displayed above outputs the following:</p> <div class="jupyter-notebook" style="position: relative; width: 100%; margin: 0 auto;"> <div class="jupyter-notebook-iframe-container"> <iframe src="/al-folio/assets/jupyter/blog.ipynb.html" style="position: absolute; top: 0; left: 0; border-style: none;" width="100%" height="100%" onload="this.parentElement.style.paddingBottom = (this.contentWindow.document.documentElement.scrollHeight + 10) + 'px'"></iframe> </div> </div> <p>Note that the jupyter notebook supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="jupyter"/><summary type="html"><![CDATA[an example of a blog post with jupyter notebook]]></summary></entry><entry><title type="html">a post with custom blockquotes</title><link href="https://alshedivat.github.io/al-folio/blog/2023/custom-blockquotes/" rel="alternate" type="text/html" title="a post with custom blockquotes"/><published>2023-05-12T19:53:00+00:00</published><updated>2023-05-12T19:53:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/custom-blockquotes</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/custom-blockquotes/"><![CDATA[<p>This post shows how to add custom styles for blockquotes. Based on <a href="https://github.com/sighingnow/jekyll-gitbook">jekyll-gitbook</a> implementation.</p> <p>We decided to support the same custom blockquotes as in <a href="https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">jekyll-gitbook</a>, which are also found in a lot of other sites’ styles. The styles definitions can be found on the <a href="https://github.com/alshedivat/al-folio/blob/master/_sass/_base.scss">_base.scss</a> file, more specifically:</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Tips, warnings, and dangers */</span>
-<span class="nc">.post</span> <span class="nc">.post-content</span> <span class="nt">blockquote</span> <span class="p">{</span>
-    <span class="k">&amp;</span><span class="nc">.block-tip</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-bg</span><span class="p">);</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/feed.xml" rel="self" type="application/atom+xml" /><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/" rel="alternate" type="text/html" /><updated>2024-09-30T21:46:55+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/feed.xml</id><title type="html">Xinyi He</title><subtitle>A GISer, Remote Sensing Lover and Point Cloud Processor</subtitle><author><name>Xinyi He</name></author><entry><title type="html">ThesisNote｜Automatic reconstruction of road surface features by using terrestrial mobile lidar</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic-reconstruction-of-road-surface-features-by-using-terrestrial-mobile-lidar/" rel="alternate" type="text/html" title="ThesisNote｜Automatic reconstruction of road surface features by using terrestrial mobile lidar" /><published>2024-09-25T00:00:00+02:00</published><updated>2024-09-25T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic%20reconstruction%20of%20road%20surface%20features%20by%20using%20terrestrial%20mobile%20lidar</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/25/ThesisNotes-Automatic-reconstruction-of-road-surface-features-by-using-terrestrial-mobile-lidar/"><![CDATA[<p>对路面的重建（Lidar）</p>
 
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
+<p>a fully automatic approach for reconstructing
+road surface features based on the terrestrial mobile light detection and ranging (lidar) technique
+![[27a36d0e1f4f46f2a4d43b4ab00a7a2.png]]</p>
 
-    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<p>road surface extraction： 就是filter路面出来
+candidate object identification： transformed into 2D regular grid images&gt; 去噪音（Morphological image processing）&gt; cluster（Component labeling）
+feature classification
+quality evaluation</p>]]></content><author><name>Xinyi He</name></author><category term="ThesisNote" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">Thesisnote 再说a survey of surface reconstruction from point clouds</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/19/ThesisNote-%E5%86%8D%E8%AF%B4A-Survey-of-Surface-Reconstruction-from-Point-Clouds/" rel="alternate" type="text/html" title="Thesisnote 再说a survey of surface reconstruction from point clouds" /><published>2024-09-19T00:00:00+02:00</published><updated>2024-09-19T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/19/ThesisNote-%E5%86%8D%E8%AF%B4A%20Survey%20of%20Surface%20Reconstruction%20from%20Point%20Clouds</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/19/ThesisNote-%E5%86%8D%E8%AF%B4A-Survey-of-Surface-Reconstruction-from-Point-Clouds/"><![CDATA[<p>尤其是LiDAR点云通常存在<strong>噪声和稀疏性</strong>问题，这些可以被视为数据缺陷，通过引入<strong>特定的先验知识</strong>（例如城市环境中的几何形状）和<strong>新的重建技术</strong>，可以进一步改善重建质量。</p>
 
-  <span class="k">&amp;</span><span class="nc">.block-warning</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-bg</span><span class="p">);</span>
+<h1 id="再说polyfit-polygonal-surface-reconstruction-from-point-clouds">再说PolyFit: Polygonal Surface Reconstruction from Point Clouds</h1>
+<p>结合你的研究——<strong>改进移动LiDAR点云的城市3D重建</strong>，这个方法可以帮助你处理<strong>稀疏或噪声点云</strong>，并通过<strong>优化的平面交叉</strong>构建精准的、轻量化的建筑表面模型，从而提高重建效率和质量。</p>]]></content><author><name>Xinyi He</name></author><summary type="html"><![CDATA[尤其是LiDAR点云通常存在噪声和稀疏性问题，这些可以被视为数据缺陷，通过引入特定的先验知识（例如城市环境中的几何形状）和新的重建技术，可以进一步改善重建质量。]]></summary></entry><entry><title type="html">Thesisnote 再说multisource point clouds, point simplification and surface reconstruction</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/19/ThesisNote-%E5%86%8D%E8%AF%B4Multisource-Point-Clouds,-Point-Simplification-and-Surface-Reconstruction/" rel="alternate" type="text/html" title="Thesisnote 再说multisource point clouds, point simplification and surface reconstruction" /><published>2024-09-19T00:00:00+02:00</published><updated>2024-09-19T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/19/ThesisNote-%E5%86%8D%E8%AF%B4Multisource%20Point%20Clouds,%20Point%20Simplification%20and%20Surface%20Reconstruction</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/09/19/ThesisNote-%E5%86%8D%E8%AF%B4Multisource-Point-Clouds,-Point-Simplification-and-Surface-Reconstruction/"><![CDATA[<p>多种表面重建方法，包括Alpha形状、屏幕化泊松重建（SPR）、Crust算法和代数点集表面（APSS Marching Cubes）
+In addition, well-known surface reconstruction methods, i.e., Alpha shapes, Screened Poisson
+reconstruction (SPR), the Crust, and Algebraic point set surfaces (APSS Marching Cubes), were
+utilized for object reconstruction</p>
 
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
+<p>The idea of our point cloud simplification method is to separate the key characteristics of an
+object from the least important points by using Principal Component Analysis (PCA) and multi-view
+projection geometry and to resample these points using different grid sizes (e.g., key characteristics use
+a small grid size, while the least important points use a big grid size) to minimize the loss of accuracy</p>]]></content><author><name>Xinyi He</name></author><summary type="html"><![CDATA[多种表面重建方法，包括Alpha形状、屏幕化泊松重建（SPR）、Crust算法和代数点集表面（APSS Marching Cubes） In addition, well-known surface reconstruction methods, i.e., Alpha shapes, Screened Poisson reconstruction (SPR), the Crust, and Algebraic point set surfaces (APSS Marching Cubes), were utilized for object reconstruction]]></summary></entry><entry><title type="html">Thesisnotes From point cloud to surface the modeling and visualization problem</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/07/05/ThesisNotes-From-point-cloud-to-surface-the-modeling-and-visualization-problem/" rel="alternate" type="text/html" title="Thesisnotes From point cloud to surface the modeling and visualization problem" /><published>2024-07-05T00:00:00+02:00</published><updated>2024-07-05T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/07/05/ThesisNotes-From%20point%20cloud%20to%20surface%20the%20modeling%20and%20visualization%20problem</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/07/05/ThesisNotes-From-point-cloud-to-surface-the-modeling-and-visualization-problem/"><![CDATA[<p>3D SHAPE TECHNIQUES FOR 3D MODEL
+RECONSTRUCTION</p>
 
-    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<p>SURFACE RECONSTRUCTION AND
+MODELING
+4.1 Classification of the reconstruction algorithms
+4.2 From points to surface
+4.3 Pre-processing operations
+4.4 Triangulation or mesh generation
+4.5 Post-processing operations
+感觉是针对这个特别精细的建模，就是广义的而且精细</p>]]></content><author><name>Xinyi He</name></author><summary type="html"><![CDATA[3D SHAPE TECHNIQUES FOR 3D MODEL RECONSTRUCTION]]></summary></entry><entry><title type="html">ThesisNote｜From point cloud to surface the modeling and visualization problem</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/07/05/ThesisNotes-Pointcloud/" rel="alternate" type="text/html" title="ThesisNote｜From point cloud to surface the modeling and visualization problem" /><published>2024-07-05T00:00:00+02:00</published><updated>2024-07-05T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/07/05/ThesisNotes-Pointcloud</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/07/05/ThesisNotes-Pointcloud/"><![CDATA[<p>3D SHAPE TECHNIQUES FOR 3D MODEL
+RECONSTRUCTION</p>
 
-  <span class="k">&amp;</span><span class="nc">.block-danger</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-bg</span><span class="p">);</span>
+<p>SURFACE RECONSTRUCTION AND
+MODELING
+4.1 Classification of the reconstruction algorithms
+4.2 From points to surface
+4.3 Pre-processing operations
+4.4 Triangulation or mesh generation
+4.5 Post-processing operations
+感觉是针对这个特别精细的建模，就是广义的而且精细</p>]]></content><author><name>Xinyi He</name></author><category term="ThesisNote" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">SQL｜Lecture 6 Softerware System</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Lecture-6-Softeware-System/" rel="alternate" type="text/html" title="SQL｜Lecture 6 Softerware System" /><published>2024-05-01T00:00:00+02:00</published><updated>2024-05-01T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Lecture%206%20Softeware%20System</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Lecture-6-Softeware-System/"><![CDATA[<p>§ Describe the Role of Databases in Software Systems
+§ Explain the features of managing data
+§ Illustrate how SQL can be secured
+§ Use of SQL FUNCTIONS</p>
 
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
+<p>Understanding data as asset requires data literacy</p>
 
-    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div> <p>A regular blockquote can be used as following:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; This is a regular blockquote</span>
-<span class="gt">&gt; and it can be used as usual</span>
-</code></pre></div></div> <blockquote> <p>This is a regular blockquote and it can be used as usual</p> </blockquote> <p>These custom styles can be used by adding the specific class to the blockquote, as follows:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### TIP</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; A tip can be used when you want to give advice</span>
-<span class="gt">&gt; related to a certain content.</span>
-{: .block-tip }
-</code></pre></div></div> <blockquote class="block-tip"> <h5 id="tip">TIP</h5> <p>A tip can be used when you want to give advice related to a certain content.</p> </blockquote> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### WARNING</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; This is a warning, and thus should</span>
-<span class="gt">&gt; be used when you want to warn the user</span>
-{: .block-warning }
-</code></pre></div></div> <blockquote class="block-warning"> <h5 id="warning">WARNING</h5> <p>This is a warning, and thus should be used when you want to warn the user</p> </blockquote> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### DANGER</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; This is a danger zone, and thus should</span>
-<span class="gt">&gt; be used carefully</span>
-{: .block-danger }
-</code></pre></div></div> <blockquote class="block-danger"> <h5 id="danger">DANGER</h5> <p>This is a danger zone, and thus should be used carefully</p> </blockquote>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="blockquotes"/><summary type="html"><![CDATA[an example of a blog post with custom blockquotes]]></summary></entry><entry><title type="html">a post with table of contents on a sidebar</title><link href="https://alshedivat.github.io/al-folio/blog/2023/sidebar-table-of-contents/" rel="alternate" type="text/html" title="a post with table of contents on a sidebar"/><published>2023-04-25T14:14:00+00:00</published><updated>2023-04-25T14:14:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/sidebar-table-of-contents</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/sidebar-table-of-contents/"><![CDATA[<p>This post shows how to add a table of contents as a sidebar.</p> <h2 id="adding-a-table-of-contents">Adding a Table of Contents</h2> <p>To add a table of contents to a post as a sidebar, simply add</p> <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">toc</span><span class="pi">:</span>
-  <span class="na">sidebar</span><span class="pi">:</span> <span class="s">left</span>
-</code></pre></div></div> <p>to the front matter of the post. The table of contents will be automatically generated from the headings in the post. If you wish to display the sidebar to the right, simply change <code class="language-plaintext highlighter-rouge">left</code> to <code class="language-plaintext highlighter-rouge">right</code>.</p> <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h3 id="example-of-another-sub-heading-1">Example of another Sub-Heading 1</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h2 data-toc-text="Customizing" id="customizing-your-table-of-contents">Customizing Your Table of Contents</h2> <p>If you want to learn more about how to customize the table of contents of your sidebar, you can check the <a href="https://afeld.github.io/bootstrap-toc/">bootstrap-toc</a> documentation. Notice that you can even customize the text of the heading that will be displayed on the sidebar.</p> <h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h3 id="example-of-another-sub-heading-2">Example of another Sub-Heading 2</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="toc"/><category term="sidebar"/><summary type="html"><![CDATA[an example of a blog post with table of contents on a sidebar]]></summary></entry><entry><title type="html">a post with audios</title><link href="https://alshedivat.github.io/al-folio/blog/2023/audios/" rel="alternate" type="text/html" title="a post with audios"/><published>2023-04-25T10:25:00+00:00</published><updated>2023-04-25T10:25:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/audios</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/audios/"><![CDATA[<p>This is an example post with audios. It supports local audio files.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <audio src="/al-folio/assets/audio/epicaly-short-113909.mp3" controls=""/> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <audio src="https://cdn.pixabay.com/download/audio/2022/06/25/audio_69a61cd6d6.mp3" controls=""/> </figure> </div> </div> <div class="caption"> A simple, elegant caption looks good between video rows, after each row, or doesn't have to be there at all. </div>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="audios"/><summary type="html"><![CDATA[this is what included audios could look like]]></summary></entry><entry><title type="html">a post with videos</title><link href="https://alshedivat.github.io/al-folio/blog/2023/videos/" rel="alternate" type="text/html" title="a post with videos"/><published>2023-04-24T21:01:00+00:00</published><updated>2023-04-24T21:01:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/videos</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/videos/"><![CDATA[<p>This is an example post with videos. It supports local video files.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <video src="/al-folio/assets/video/pexels-engin-akyurt-6069112-960x540-30fps.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""/> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <video src="/al-folio/assets/video/pexels-engin-akyurt-6069112-960x540-30fps.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls=""/> </figure> </div> </div> <div class="caption"> A simple, elegant caption looks good between video rows, after each row, or doesn't have to be there at all. </div> <p>It does also support embedding videos from different sources. Here are some examples:</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"/> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <iframe src="https://player.vimeo.com/video/524933864?h=1ac4fd9fb4&amp;title=0&amp;byline=0&amp;portrait=0" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"/> </figure> </div> </div>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="videos"/><summary type="html"><![CDATA[this is what included videos could look like]]></summary></entry><entry><title type="html">displaying beautiful tables with Bootstrap Tables</title><link href="https://alshedivat.github.io/al-folio/blog/2023/tables/" rel="alternate" type="text/html" title="displaying beautiful tables with Bootstrap Tables"/><published>2023-03-20T18:37:00+00:00</published><updated>2023-03-20T18:37:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/tables</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/tables/"><![CDATA[<p>Using markdown to display tables is easy. Just use the following syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Left aligned | Center aligned | Right aligned |
-| :----------- | :------------: | ------------: |
-| Left 1       | center 1       | right 1       |
-| Left 2       | center 2       | right 2       |
-| Left 3       | center 3       | right 3       |
-</code></pre></div></div> <p>That will generate:</p> <table> <thead> <tr> <th style="text-align: left">Left aligned</th> <th style="text-align: center">Center aligned</th> <th style="text-align: right">Right aligned</th> </tr> </thead> <tbody> <tr> <td style="text-align: left">Left 1</td> <td style="text-align: center">center 1</td> <td style="text-align: right">right 1</td> </tr> <tr> <td style="text-align: left">Left 2</td> <td style="text-align: center">center 2</td> <td style="text-align: right">right 2</td> </tr> <tr> <td style="text-align: left">Left 3</td> <td style="text-align: center">center 3</td> <td style="text-align: right">right 3</td> </tr> </tbody> </table> <p></p> <p>It is also possible to use HTML to display tables. For example, the following HTML code will display a table with <a href="https://bootstrap-table.com/">Bootstrap Table</a>, loaded from a JSON file:</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span>
-  <span class="na">id=</span><span class="s">"table"</span>
-  <span class="na">data-toggle=</span><span class="s">"table"</span>
-  <span class="na">data-url=</span><span class="s">"{{ '/assets/json/table_data.json' | relative_url }}"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-field=</span><span class="s">"id"</span><span class="nt">&gt;</span>ID<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-field=</span><span class="s">"name"</span><span class="nt">&gt;</span>Item Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-field=</span><span class="s">"price"</span><span class="nt">&gt;</span>Item Price<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</code></pre></div></div> <table data-toggle="table" data-url="/al-folio/assets/json/table_data.json"> <thead> <tr> <th data-field="id">ID</th> <th data-field="name">Item Name</th> <th data-field="price">Item Price</th> </tr> </thead> </table> <p></p> <p>By using <a href="https://bootstrap-table.com/">Bootstrap Table</a> it is possible to create pretty complex tables, with pagination, search, and more. For example, the following HTML code will display a table, loaded from a JSON file, with pagination, search, checkboxes, and header/content alignment. For more information, check the <a href="https://examples.bootstrap-table.com/index.html">documentation</a>.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span>
-  <span class="na">data-click-to-select=</span><span class="s">"true"</span>
-  <span class="na">data-height=</span><span class="s">"460"</span>
-  <span class="na">data-pagination=</span><span class="s">"true"</span>
-  <span class="na">data-search=</span><span class="s">"true"</span>
-  <span class="na">data-toggle=</span><span class="s">"table"</span>
-  <span class="na">data-url=</span><span class="s">"{{ '/assets/json/table_data.json' | relative_url }}"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-checkbox=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-field=</span><span class="s">"id"</span> <span class="na">data-halign=</span><span class="s">"left"</span> <span class="na">data-align=</span><span class="s">"center"</span> <span class="na">data-sortable=</span><span class="s">"true"</span><span class="nt">&gt;</span>ID<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-field=</span><span class="s">"name"</span> <span class="na">data-halign=</span><span class="s">"center"</span> <span class="na">data-align=</span><span class="s">"right"</span> <span class="na">data-sortable=</span><span class="s">"true"</span><span class="nt">&gt;</span>Item Name<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">data-field=</span><span class="s">"price"</span> <span class="na">data-halign=</span><span class="s">"right"</span> <span class="na">data-align=</span><span class="s">"left"</span> <span class="na">data-sortable=</span><span class="s">"true"</span><span class="nt">&gt;</span>Item Price<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;/thead&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</code></pre></div></div> <table data-click-to-select="true" data-height="460" data-pagination="true" data-search="true" data-toggle="table" data-url="/al-folio/assets/json/table_data.json"> <thead> <tr> <th data-checkbox="true"></th> <th data-field="id" data-halign="left" data-align="center" data-sortable="true">ID</th> <th data-field="name" data-halign="center" data-align="right" data-sortable="true">Item Name</th> <th data-field="price" data-halign="right" data-align="left" data-sortable="true">Item Price</th> </tr> </thead> </table>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="tables"/><summary type="html"><![CDATA[an example of how to use Bootstrap Tables]]></summary></entry><entry><title type="html">a post with table of contents</title><link href="https://alshedivat.github.io/al-folio/blog/2023/table-of-contents/" rel="alternate" type="text/html" title="a post with table of contents"/><published>2023-03-20T15:59:00+00:00</published><updated>2023-03-20T15:59:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2023/table-of-contents</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2023/table-of-contents/"><![CDATA[<p>This post shows how to add a table of contents in the beginning of the post.</p> <h2 id="adding-a-table-of-contents">Adding a Table of Contents</h2> <p>To add a table of contents to a post, simply add</p> <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">toc</span><span class="pi">:</span>
-  <span class="na">beginning</span><span class="pi">:</span> <span class="kc">true</span>
-</code></pre></div></div> <p>to the front matter of the post. The table of contents will be automatically generated from the headings in the post.</p> <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h3 id="example-of-another-sub-heading-1">Example of another Sub-Heading 1</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h2 id="table-of-contents-options">Table of Contents Options</h2> <p>If you want to learn more about how to customize the table of contents, you can check the <a href="https://github.com/toshimaru/jekyll-toc">jekyll-toc</a> repository.</p> <h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h3 id="example-of-another-sub-heading-2">Example of another Sub-Heading 2</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="toc"/><summary type="html"><![CDATA[an example of a blog post with table of contents]]></summary></entry><entry><title type="html">a post with giscus comments</title><link href="https://alshedivat.github.io/al-folio/blog/2022/giscus-comments/" rel="alternate" type="text/html" title="a post with giscus comments"/><published>2022-12-10T15:59:00+00:00</published><updated>2022-12-10T15:59:00+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2022/giscus-comments</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2022/giscus-comments/"><![CDATA[<p>This post shows how to add GISCUS comments.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="external-services"/><category term="comments"/><summary type="html"><![CDATA[an example of a blog post with giscus comments]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://alshedivat.github.io/al-folio/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog"/><published>2022-04-23T23:20:09+00:00</published><updated>2022-04-23T23:20:09+00:00</updated><id>https://alshedivat.github.io/al-folio/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://alshedivat.github.io/al-folio/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[]]></content><author><name></name></author></entry></feed>
+<h2 id="benefits-of-database-in-a-software">BENEFITS OF DATABASE IN A SOFTWARE</h2>
+<p>§ Data sharing
+§ Data Availability
+§ Time Saving
+§ Database security
+§ Save money &amp; Increase profit</p>
+<h2 id="software--data">Software &amp; Data</h2>
+<h5 id="software-engineer">Software Engineer</h5>
+<p>Andrioid client&gt; PHP web seivices&gt; MySQL database</p>
+<h5 id="data-scientist">Data Scientist</h5>
+<p>extraction tool 
+machine learning 
+recommendation tool</p>
+<h5 id="software-development">Software Development</h5>
+<p>Waterfall Model</p>
+<h2 id="inside-dbms">inside DBMS</h2>
+<h4 id="management-of-information">Management of Information</h4>
+<h4 id="accurate">Accurate</h4>
+<p>strict data types enfored(int string, varchar)
+Lebgth of data types</p>
+<h4 id="consistent">Consistent</h4>
+<p>interoperable or flow sync between sysyems or depts</p>
+<h4 id="security">Security</h4>
+<p>privacy policy
+accidental record loss</p>
+<h2 id="better-data-better-decisions">Better data= better decisions</h2>
+<h2 id="requirement-elicitation">Requirement Elicitation</h2>
+<p>observations
+brainstorming storytelling
+interviews: unstrutured, open-end questions
+prototyping</p>
+
+<p>backwards compatibility</p>
+<h2 id="standardised-data">Standardised data</h2>
+<p>refine, combine and re-use data
+generate dictionary to describe the data-meta data</p>
+<h2 id="entities">Entities</h2>
+<h3 id="view">View</h3>
+<p>virtual tables
+combine tables using join or just a subset of one table
+hide large complicated queries» performance
+once created, can be used and accessed as any table in the DB» security</p>
+<h2 id="sql-attack">SQL Attack</h2>
+<h4 id="how-to-stop-sql-injection">How to stop SQL injection</h4>
+<p>Sanitization: removing illegal characters form user inputs
+SQL Injection is an attack type that exploits bad SQL statements</p>
+<h2 id="data-audit审计">DATA Audit(审计)</h2>
+<p>User Access and Authentication
+Data Unauthorised users, restricted data</p>
+<h3 id="how-to-audit">How to audit?</h3>
+<p>Identifying and tracking details such as the 
+user, time, data, and change activities can 
+help companies comply with many data 
+compliance rules, and this auditing function 
+will take on added importance with the new 
+GDPR compliance requirements</p>
+
+<p>Create Log files of errors and update Table</p>
+<h2 id="built-in-function">Built-in Function</h2>
+<p><img src="/images/posts/45bc9ee2512584f83035e86e05de108.png" alt="" />
+<img src="/images/posts/03f6dca10ff2dd1758398a1608fae8f.png" alt="" />
+<img src="/images/posts/f1b69c078eb17d0ba403e0d3e9202d7.png" alt="" /></p>
+
+<p><img src="/images/posts/081f768577c05545ce0dd04f90547a0.png" alt="" /></p>
+
+<h2 id="sql-errors">SQL Errors</h2>
+<p>syntax errors语法错误
+semantic errors语义错误
+constraint violations违反约束
+datatype errors数据类型不匹配
+https://www.w3schools.com/sql/default.asp</p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">SQL｜Notes for Books</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Notes-for-Book/" rel="alternate" type="text/html" title="SQL｜Notes for Books" /><published>2024-05-01T00:00:00+02:00</published><updated>2024-05-01T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Notes%20for%20Book</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Notes-for-Book/"><![CDATA[<h1 id="the-managerial-perspective">The Managerial Perspective</h1>
+<p>1 components of organizational memory and then discussing some of its common problems.
+2 the relationship between information and organizational goals</p>
+
+<p>Newell-Simon Model
+the augmented human information processing model becomes a pattern for an organizational information precessing system
+<img src="/images/posts/9b1be5776c72bde519eb25fb0415956.png" alt="" /></p>
+
+<h1 id="chapter-1-managing-data">Chapter 1 Managing Data</h1>
+<p>Memory system</p>
+<h2 id="individual-data-management">Individual data management</h2>
+<p>interval memories
+exterval memories: to do list : the some features commom to all data management systems: storage medium, structure for storing data, interface for rapid data entry and retrieval</p>
+<h2 id="organizational-data-management">Organizational data management</h2>
+<p>Types of information systems</p>
+<h3 id="the-information-systems-cycle">The information systems cycle</h3>
+<h3 id="desirable-attributes-of-data">Desirable attributes of data</h3>
+<h3 id="components-of-organizational-memory">Components of organizational memory</h3>
+<p><img src="/images/posts/3731c3b0a044c1b31d44fa072f5520e.png" alt="" /></p>
+<h2 id="problems-with-data-management-systems">Problems with data management systems</h2>
+<p>redundancy, lack of data control, poor interface, delays, lack of reality, lack of data integration</p>
+
+<h1 id="chapter-2-information">Chapter 2 Information</h1>
+<p>This chapter has some good parts and some arguable ones. It presents a very partial view of information. For instance, information is also a commodity of power, as you will probably have experienced. Also, there is more to decision making than information. There are many viewpoints in this chapter that could be questioned. Furthermore, the focus is very much on business information. Research institutes function in a somewhat different way. Still, if you change “manager” into “research client” much remains valid</p>
+<h2 id="a-historical-perspective">A historical perspective</h2>
+<h2 id="a-brief-history-of-information-systems">A brief history of information systems</h2>
+<h2 id="information-characteristics">Information Characteristics</h2>
+<p>hardness, richness, class(content, form, behavior, and action)</p>
+<h2 id="information-and-organizational-change">Information and organizational change</h2>
+<p>goal-setting information, planning, benchmarking,gap information, problem identification,scorekeeping,change information, problem solution, information as a means of change, marketing,customer service, empowerment,</p>
+<h2 id="information-delivery-systems">Information delivery systems</h2>
+<h2 id="information-intergration">Information intergration</h2>
+<h2 id="knowledge">Knowledge</h2>
+<h1 id="section2-data-modeling-and-sql">Section2 Data Modeling and SQL</h1>
+
+<h1 id="chapter-3-the-single-entity">Chapter 3: The Single Entity</h1>
+<p>Note: Entity-Relationship diagramming
+key skills : data modeling and query formation
+Data definition language(DDL)
+Data manipulation language(DML)
+<strong>Structured Query Language (SQL)</strong></p>
+
+<h2 id="creating-a-single-table-database">Creating a single-table database</h2>
+<p>entity一个表是entity
+entity name becomes the table name
+identifier becomes the primary key
+attributes就是一个column
+instance 这个表里面的一行就是freedonia copper是一个instance</p>
+<h3 id="defining-a-table">Defining a table</h3>
+
+<p>| VARCHAR(n) | A variable-length string of up to n characters |
+| ———- | ———————————————- |
+open diamond indicate the column can be null
+closed diamond indicate the column must have a value</p>
+<h3 id="inserting-rows-into-a-table">Inserting rows into a table</h3>
+<h3 id="querying-a-single-table-database">Querying a single-table database</h3>
+<p>&lt;&gt;不等于
+和a BETWEEN x AND y等于 a &gt;= x AND a &lt;= y</p>
+<h4 id="in-和or相等">IN 和or相等</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM share WHERE shrcode IN ('FC','AR','SLG');
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM share
+  WHERE shrcode = 'FC' or shrcode = 'AR' or shrcode = 'SLG';
+</code></pre></div></div>
+<h4 id="not-in-和相等">NOT IN 和&lt;&gt;相等</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM share WHERE shrcode NOT IN ('CS','PT');
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM share WHERE shrcode &lt;&gt; 'CS' AND shrcode &lt;&gt; 'PT';
+</code></pre></div></div>
+<h4 id="ordering-columns">Ordering columns</h4>
+<h4 id="ordering-rows">Ordering rows</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM share WHERE shrpe &gt;= 10
+  ORDER BY shrpe DESC, shrfirm;
+</code></pre></div></div>
+<p>按照shrpe的大小来降序排列
+数据的类型，根据numeric 来排列和根据characher来排列是不同的</p>
+<h4 id="derived-data">Derived data</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT shrfirm, shrprice, shrqty, shrdiv/shrprice*100 AS yield FROM share;
+</code></pre></div></div>
+<p>因为yield可以根据前面的这几个计算，所以只需要在view的时候算给他就行了，不需要给它作为一个列</p>
+<h4 id="aggregate-functions">Aggregate functions</h4>
+<p>COUNT</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT COUNT(shrfirm) AS bigholdings FROM share WHERE shrqty &gt; 50000;
+</code></pre></div></div>
+<p>AVG-averaging
+SUM
+MIN
+MAX</p>
+<h3 id="subqueries">Subqueries</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT shrfirm, shrpe FROM share
+  WHERE shrpe &gt; (SELECT AVG(shrpe) FROM share);
+</code></pre></div></div>
+<p>经典错误
+SELECT shrfirm, shrpe from share WHERE shrpe &gt; avg(shrpe);
+==你不能在WHERE子句中直接引用聚合函数结果作为过滤条件==</p>
+<h3 id="regular-expression">Regular Expression</h3>
+<p>search for a string
+<em>List all firms containing ‘Ruby’ in their name</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT shrfirm FROM share WHERE shrfirm REGEXP 'Ruby';
+</code></pre></div></div>
+<p>search for alternative strings</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT shrfirm FROM share WHERE LOWER(shrfirm) REGEXP 'gold|zinc';
+</code></pre></div></div>
+<p>search for beginning string/ending string
+‘^Sri’/ ‘geese$’</p>
+<h3 id="distinct">DISTINCT</h3>
+<p>eliminating duplicate rows</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT DISTINCT shrpe FROM share;
+</code></pre></div></div>
+<p>unique</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT COUNT(DISTINCT shrpe) as 'Different PEs' FROM share;
+</code></pre></div></div>
+<h3 id="delete">DELETE</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE FROM share WHERE shrfirm = 'Burmese Elephant';
+</code></pre></div></div>
+<h3 id="update">UPDATE</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE share SET shrprice = 31.50 WHERE shrcode = 'FC';
+</code></pre></div></div>
+
+<p>2a
+SELECT name, code FROM share
+2d.
+SELECT * FROM share WHERE price &lt; 1
+2c.
+SELECT name, price FROM share WHERE price &gt;=10
+2d.
+SELECT firm name, price, holding, firm name * price * holding AS total FROM share</p>
+
+<p>2e.
+SELECT name, price/ holding* 100 AS yield FROM share WHERE yield &gt;5
+2f.
+SELECT dividend * quantity AS totaldiv FROM share WHERE code = ‘PT’</p>
+
+<p>2g.
+SELECT * FROM share WHERE  price &lt; dividend * 20
+2h.==subqueries==
+SELECT  price/ holding* 100 AS yield FROM share WHERE yield &gt;(SELECT MIN（yield） FROM share）</p>
+
+<p>2i,
+SELECT SUM(price) FROM share WHERE PEratio &gt;10
+2j.</p>
+
+<h1 id="chapter-4-the-one-to-many-relationship">Chapter 4 The One-to-Many Relationship</h1>
+<p>natcode是stock的外键，因为它是nation的主键，natcode是斜体，红色菱形（外键）
+every foreign key must have a matching primary key
+primary key is non-null
+but foreign key can null</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  PRIMARY KEY(stkcode),
+  CONSTRAINT fk_has_nation FOREIGN KEY(natcode)
+  REFERENCES nation(natcode) ON DELETE RESTRICT);
+</code></pre></div></div>
+<p>限制两个表里的同一列的值相同，就是natcode是它的外键而不允许删除。</p>
+<h2 id="querying-a-two-table-database">Querying a two-table database</h2>
+<h3 id="join">Join</h3>
+<p>两个表里都各有一个部分我们想要，组成一个新表的时候
+虽然这个列（一个表里的FK，另一个表里的PK），但是查询的时候要写table名。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT natname, sum(stkprice*stkqty*exchrate) as stkvalue
+    FROM stock JOIN nation ON stock.natcode = nation.natcode
+        GROUP BY natname;
+</code></pre></div></div>
+<h3 id="group-by---reporting-be-groups">GROUP BY - reporting be groups</h3>
+<p><em>List stocks by nation, and for each nation show the number of stocks for each PE ratio and the total value of those stock holdings in UK pounds.</em>
+SELECT natname, stkpe, COUNT(<em>), SUM(stkprice</em> stkqty*exchrate) AS stkvalue FROM stock,nation
+GROUP BY natname, stkpe;</p>
+
+<p>list stocks by nation (就是GROUP BY natname, stkpe, 换句话说，每个不同的 (natname, stkpe) 组合将被视为一个分组), and for each nation show the number of stocks for each PE ratio(SELECT natname, stkpe, COUNT(* ))这个COUNT计数的（natname, stkpe）组合的计数 and the total value of those stock holdings in UK pounds(SUM(stkprice * stkqty * exchrate) AS stkvalue)</p>
+<h3 id="having">HAVING</h3>
+<p>HAVING in GROUP BY 就像是WHERE in SELECT
+HAVING 前面始终是 GROUP BY，后面始终是函数（SUM、AVG、MAX、MIN 或 COUNT）</p>
+<h3 id="regular-expression--pattern-matching">Regular expression- pattern matching</h3>
+<p>不含specified charachters的string :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT natname FROM nation WHERE LOWER(natname) REGEXP '[^a-z]'
+</code></pre></div></div>
+<p>repeated pattern or repetition</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT stkfirm FROM stock WHERE stkfirm REGEXP '[e]{2}';
+</code></pre></div></div>
+<p>combining alternation and repetition
+multiple versions of a string</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> WHERE LOWER(stkfirm) REGEXP '[io]nia';
+</code></pre></div></div>
+<p>string in a particular position</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WHERE LOWER(stkfirm) REGEXP '^(.){2}t';
+</code></pre></div></div>
+<p>string not containing any specified characters</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WHERE LOWER(natname) REGEXP '^[^s]*$'
+</code></pre></div></div>
+<h3 id="subqueries-1">Subqueries</h3>
+<p>Outer query
+SELECT stkfirm FROM stock WHERE natcode IN
+Inner query
+(SELECT natcode FROM nation WHERE natname = ‘Australia’)
+在inner query里面就不必implicity qualified as nation.natcode了
+在outer query里面就默认是stock.natcode</p>
+
+<h4 id="correlated-subquery">correlated subquery</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT natname, stkfirm, stkqty FROM stock JOIN nation
+    ON stock.natcode = nation.natcode
+    WHERE stkqty &gt;
+        (SELECT avg(stkqty) FROM stock
+            WHERE stock.natcode = nation.natcode);对每个国家算它这个国家的平均股票水平
+</code></pre></div></div>
+<h3 id="views--virtual-tables">Views- virtual tables</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE VIEW stkvalue
+    (nation, firm, price, qty, exchrate, value)
+    AS SELECT natname, stkfirm, stkprice, stkqty, exchrate,
+        stkprice*stkqty*exchrate
+            FROM stock JOIN nation
+            ON stock.natcode = nation.natcode;
+</code></pre></div></div>
+<p>A view can be used in a query</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT nation, firm, value FROM stkvalue WHERE value &gt; 100000;
+</code></pre></div></div>
+
+<p>2a
+SELECT stkprice * stkqty * exchrate AS value FROM stock JOIN nation ON stock.natcode = nation.natcode WHERE natname = ‘AUS’;
+2b.Report the dividend payment of all stocks.???</p>
+
+<p>SELECT stkcode, stkfirm, stkdiv<em>stkqty</em>exchrate 
+     FROM stock JOIN nation 
+         ON stock.natcode = nation.natcode;</p>
+
+<p>2c.
+SELECT<mark style="background: #FFB86CA6;"> natname</mark>, SUM(stkqty * stkprice) FROM stock, nation
+GROUP BY natcode;这里还是要用JOIN的</p>
+
+<p>2d. 
+CREATE VIEW value
+(nation, frim, stkprice, stkqty, exchrate, value, yield)
+AS SELECT natname, stkfirm, stkprice, stkqty, exchrate,
+ FROM stock JOIN nation ON stock.natcode = nation.natcode;</p>
+
+<p>2e.
+SELECT <mark style="background: #FFB86CA6;">natname</mark>,AVG(value.yield) FORM stock JOIN nation ON  stock.natcode = nation.natcode
+GROUP BY natcode;
+2f. 
+SELECT natname, MAX(value.yield), MIN(value.yield) FORM stock JOIN nation ON  stock.natcode = nation.natcode
+GROUP BY natcode;</p>
+
+<p>==2g. ???==</p>
+
+<p>SELECT natname, stkfirm, stkqty, stkprice<em>stkqty</em>exchrate,stkdiv/stkprice<em>100</em>exchrate AS yield
+FROM stock 
+JOIN nation
+ON stock.natcode = nation.natcode
+WHERE yield &gt;
+(SELECT avg(yield) FROM stock GROUP BY natname )</p>
+
+<p>error Code: 1054. Unknown column ‘yield’ in ‘where clause’	0.094 sec</p>
+
+<p>SELECT natname, stkfirm, stkqty,stkprice<em>stkqty</em>exchrate,stkdiv/stkprice<em>100</em>exchrate AS yield
+FROM stock 
+JOIN nation ON stock.natcode = nation.natcode
+GROUP BY natname 
+HAVING AVG(yield) &gt;
+(SELECT AVG(yield) FROM stock);</p>
+
+<h1 id="chapter-5-the-many-to-many-relationship">Chapter 5 The Many-to-Many Relationship</h1>
+
+<p>The plus indicates that LINEITEM’s unique identifier is the concatenation of <em>saleno</em> and <em>lineno</em>
+When we have an m:m relationship, we create an associative entity to store data about the relationship.
+<img src="/images/posts/7890a4ef17c8df86158708bfabe9bf3.png" alt="" />
+<img src="/images/posts/24e28d361ee65d9bd0f5b0404770b5e.png" alt="" /></p>
+
+<p>CREATE TABLE lineitem (
+    lineno      INTEGER,
+    lineqty     INTEGER NOT NULL,
+    lineprice       DECIMAL(7,2) NOT NULL,
+    saleno      INTEGER,
+    itemno      INTEGER,
+        <mark style="background: #FFB86CA6;">PRIMARY KEY(lineno,saleno),</mark>
+        CONSTRAINT fk_has_sale FOREIGN KEY(saleno)
+            REFERENCES sale(saleno),
+        CONSTRAINT fk_has_item FOREIGN KEY(itemno)
+            REFERENCES item(itemno));
+Lineno位于两个1 ： m关系的many 端。</p>
+<h2 id="querying-an-m--m-relationship">Querying an m : m relationship</h2>
+<h3 id="a-three-table-join-三表连接">A three-table join: 三表连接</h3>
+
+<h3 id="exists-是否存在">EXISTS 是否存在</h3>
+<p>at least one line meets a specified condition</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT itemname, itemcolor FROM item
+    WHERE itemtype = 'C'
+    AND EXISTS (SELECT * FROM lineitem
+        WHERE lineitem.itemno = item.itemno);
+</code></pre></div></div>
+<p>NOT EXISTS子查询来检查这些商品是否在lineitem表中没有对应的条目。如果没有对应的条目，则这些商品符合查询的条件，将会被返回。
+all rows do not satisfy a specified condition</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT itemname, itemcolor FROM item
+    WHERE itemtype = 'C'
+    AND NOT EXISTS
+        (SELECT * FROM lineitem
+            WHERE item.itemno = lineitem.itemno);
+</code></pre></div></div>
+<h3 id="divide除法双重否定">Divide除法/双重否定</h3>
+<p>Find the items that have appeared in all sales.
+forall</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT itemno, itemname FROM item
+    WHERE NOT EXISTS
+        (SELECT * FROM sale
+            WHERE NOT EXISTS
+                (SELECT * FROM lineitem
+                    WHERE lineitem.itemno = item.itemno
+                    AND lineitem.saleno = sale.saleno));
+</code></pre></div></div>
+<p>![[5292a4f30344f6a165751ec661d7cfd.png]]</p>
+<h3 id="beyond-the-great-divide">Beyond the great divide</h3>
+<p>The query “Find the items that have appeared in all sales”</p>
+
+<p>“Find the items for which the number of sales that include this item is equal to the total number of sales.”
+“Find items such that there does not exist a sale in which this item does not appear.”</p>
+
+<p>如果某个 “saleno” 值在表 “sale” 中出现了多次，COUNT(DISTINCT saleno) 将会计算这个 “saleno” 值为一个唯一值，而不会重复计算。因此，结果会告诉您有多少个不同的 “saleno” 值在表 “sale” 中出现了。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT item.itemno, item.itemname
+    FROM item JOIN lineitem
+        ON item.itemno = lineitem.itemno
+            GROUP BY item.itemno, item.itemname
+                HAVING COUNT(DISTINCT saleno)
+                    = (SELECT COUNT(DISTINCT saleno) FROM sale);
+</code></pre></div></div>
+<h3 id="set-operations">Set Operations</h3>
+<p>UNION or
+INTERSECT and</p>
+
+<p>3</p>
+<ol>
+  <li>
+    <p>List the names of items for which the quantity sold is greater than one for any sale.</p>
+  </li>
+  <li>
+    <p>Compute the total value of sales for each item by date.</p>
+  </li>
+  <li>
+    <p>Report all items of type “F” that have been sold.</p>
+  </li>
+  <li>
+    <p>List all items of type “F” that have not been sold.</p>
+  </li>
+  <li>
+    <p>Compute the total value of each sale.<br />
+a
+SELECT itemno, itemname 
+FROM item JOIN lineitem
+ON item.itemno = lineitem.itemno
+WHERE (SELECT COUNT(DISTINCT itemno) FROM lineitem) &gt;1
+b.
+SELECT itemno, itemname 
+FROM item JOIN lineitem
+ON item.itemno = lineitem.itemno
+lineitem JOIN sale
+ON lineitem.saleno = sale.saleno
+GROUP BY saledate 
+HAVING (SELECT COUNT(DISTINCT itemno) FROM lineitem)
+c.
+SELECT itemno, itemname FROM item
+WHERE NOT EXISTS
+(SELECT * FROM sale
+WHERE NOT EXISTS
+(SELECT * FROM lineitem
+WHERE lineitem.itemno = item.itemno
+AND lineitem.saleno = sale.saleno
+AND itemtype = “F”));
+d.
+SELECT itemno, itemname FROM item
+WHERE NOT EXISTS
+(SELECT * FROM sale
+WHERE  EXISTS
+(SELECT * FROM lineitem
+WHERE lineitem.itemno = item.itemno
+AND lineitem.saleno = sale.saleno
+AND itemtype = “F”));
+e.
+SELECT saleno, SUM(lineqty * lineprice) <br />
+FROM lineitem <br />
+GROUP BY saleno;</p>
+  </li>
+</ol>
+
+<h1 id="chapter-6-one-to-one-and-recursive-relationships">Chapter 6 One-to-One and Recursive Relationships</h1>
+
+<h2 id="modeling-a-one-to-one-relationship">Modeling a one-to-one relationship</h2>
+<p>就是这个1:1是隐藏的，所以要把它标出来
+大概就是一个boss可以用很多个employee
+<img src="/images/posts/a4f62424170774677f8f381dfc740c9.png" alt="" /></p>
+<h2 id="不同的表中进行的递归mapping-a-recursive-one-to-many-relationship">不同的表中进行的递归：Mapping a recursive one-to-many relationship</h2>
+<p>在many的那一端创建一个additional column as foreign key.
+In this case, empno is used, so we use bossno as the FK in empoly table
+<img src="/images/posts/12698bb9bf73c7990861a985582f392.png" alt="" />
+就是emp表里有deptname(另一个表的主键)，能作为FK，还有一个附加列。
+dep表里有empno（另一个表的主键）不能作为FK</p>
+<h3 id="sql">SQL</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE dept (
+    deptname        VARCHAR(15),
+    deptfloor       SMALLINT NOT NULL,
+    deptphone       SMALLINT NOT NULL,
+    empno           SMALLINT NOT NULL,
+    PRIMARY KEY(deptname));
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE emp (
+    empno           SMALLINT,
+    empfname        VARCHAR(10),
+    empsalary       DECIMAL(7,0),
+    deptname        VARCHAR(15),
+    bossno          SMALLINT,
+    PRIMARY KEY(empno),
+    CONSTRAINT fk_belong_dept FOREIGN KEY(deptname)
+        REFERENCES dept(deptname),
+    CONSTRAINT fk_has_boss FOREIGN KEY(bossno)
+        REFERENCES emp(empno));
+</code></pre></div></div>
+<p>如果dep也定义deptname作为FK的话，那么就有两个约束就不对了，就是deadlock了</p>
+<h3 id="self-referential-foreign-key">Self-Referential foreign key</h3>
+<p>note order</p>
+<h2 id="query-one-to-one-relationship">Query One-to-One Relationship</h2>
+<p>List the salary of each department’s boss</p>
+
+<p>SELECT emfname, deptname, empsalary FROM emp
+WHERE empno IN (SELECT empno FROM dept);</p>
+
+<p>（GROUP BY 用HAVING， SELECT 用WHERE, WHERE 用IN）</p>
+
+<h2 id="querying-a-recursive-1--m-relationship">Querying a recursive 1 : m relationship</h2>
+<p>就是把两个表合到一起，就可以在同一行查询</p>
+
+<p><em>Find the salary of Nancy’s boss.</em></p>
+
+<p>WITH
+wrk AS (SELECT * FROM emp),
+boss AS( SELECT * FROM emp)
+SELECT wrk.empfname, wrk.empsalary , boss.empfname, boss.empsalary
+FROM wrk JOIN boss
+ON wrk.bossno = boss.empno
+WHERE wrk.empfname = ‘Nancy’;</p>
+
+<p><em>Find the names of employees who earn more than their boss.</em></p>
+<h2 id="在同一个表里进行的递归modeling-a-recursive-one-to-one-relationship">在同一个表里进行的递归Modeling a recursive one-to-one relationship</h2>
+<p><img src="/images/posts/e03261288bdefb7a5bf65e6b0bf692c.png" alt="" />
+也可以用self referential</p>
+<h2 id="同一个表querying-a-recursive-one-to-one-relationship">同一个表Querying a recursive one-to-one relationship</h2>
+<p><em>Was Elizabeth II’s predecessor a king or queen?</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WITH
+cur AS (SELECT * FROM monarch),
+pre AS (SELECT * FROM monarch)
+SELECT pre.montype FROM cur JOIN  pre
+    ON cur.premonname = pre.monname AND cur.premonnum = pre.monnum
+    WHERE cur.monname = 'Elizabeth'
+    AND cur.monnum = 'II';
+</code></pre></div></div>
+<p><em>List the kings and queens of England in ascending chronological order.</em></p>
+
+<p>SELECT montype, monname, monnum, rgnbeg
+ FROM monarch ORDER BY rgnbeg(时间的那一列);</p>
+<h2 id="modeling-a-recursive-many-to-many-relationship">Modeling a recursive many-to-many relationship</h2>
+<p>两个表也可以表示m : m关系，因为就是商品，买家和销售列表是三个表，但是如果商品多一列附加列是买家的主键，就可以递归两个表表示m:m
+<img src="/images/posts/c827248c307d39098033537d7ee59a0.png" alt="" /></p>
+<h2 id="mapping-a-recursive-many-to-many-relationship">Mapping a recursive many-to-many relationship</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE product (
+    prodid          INTEGER,
+    proddesc        VARCHAR(30),
+    prodcost        DECIMAL(9,2),
+    prodprice       DECIMAL(9,2),
+        PRIMARY KEY(prodid));
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE assembly (
+    quantity        INTEGER NOT NULL,
+    prodid          INTEGER,
+    subprodid       INTEGER,
+        PRIMARY KEY(prodid, subprodid),
+        CONSTRAINT fk_assembly_product FOREIGN KEY(prodid)
+            REFERENCES product(prodid),
+        CONSTRAINT fk_assembly_subproduct FOREIGN KEY(subprodid)
+            REFERENCES product(prodid));
+</code></pre></div></div>
+<h2 id="querying-a-recursibe-many-to-many-relationship">Querying a recursibe many-to-many relationship</h2>
+<p><em>List the product description and cost of each component of the animal photography kit.</em></p>
+
+<p>可以用上面一样的方法</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WITH
+a AS (SELECT * FROM product),
+b AS (SELECT * FROM product)
+SELECT b.proddesc, b.prodcost FROM a JOIN assembly
+        ON a.prodid = assembly.prodid
+        JOIN b
+        ON assembly.subprodid = b.prodid
+        WHERE a.proddesc = 'Animal photography kit';
+</code></pre></div></div>
+<p>也可以用内部查询加外部查询</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT proddesc, prodcost FROM product
+    WHERE prodid IN
+        (SELECT subprodid FROM product JOIN assembly
+                ON product.prodid = assembly.prodid
+                WHERE proddesc = 'Animal photography kit');
+</code></pre></div></div>
+
+<p>Write SQL to answer the following queries using the DEPT and EMP tables described in this chapter:
+使用本章中描述的 DEPT 和 EMP 表编写 SQL 来回答以下查询：</p>
+
+<p>Find the departments where all the employees earn less than their boss.
+找到所有员工收入都低于老板的部门。
+WITH 
+wrk AS (SELECT * FROM emp),
+boss AS (SELECT * FROM emp)
+SELECT wrk.deptname FROM dept
+JOIN wrk
+ON wrk.bossno = dept.empno
+JOIN boss
+ON boss. bossno = dept.empno
+WHERE wrk.empsalary &lt; boss.empsalary;</p>
+
+<p>Find the names of employees who are in the same department as their boss (as an employee).
+查找与其老板（作为员工）在同一部门的员工姓名。</p>
+
+<p>List the departments having an average salary greater than $25,000.
+列出平均工资超过 25,000 美元的部门。</p>
+
+<p>List the departments where the average salary of the employees, excluding the boss, is greater than $25,000.
+列出员工平均工资（不包括老板）超过 25,000 美元的部门。</p>
+
+<p>List the names and manager of the employees of the Marketing department who have a salary greater than $25,000.
+列出营销部门年薪超过 25,000 美元的员工姓名和经理。</p>
+
+<p>List the names of the employees who earn more than any employee in the Marketing department.
+列出收入高于营销部门任何员工的员工姓名。</p>
+<h1 id="chapter-7-data-modeling">Chapter 7 Data Modeling</h1>
+<p>the scope of its business
+models
+technology» trigger
+data models are converted into relational database</p>
+<h2 id="data-modeling">Data Modeling</h2>
+<h3 id="building-blocks">Building blocks</h3>
+<p>entity 
+attribute
+relationship
+<img src="/images/posts/9aba33059a83babff0099334fc90491.png" alt="" />
+identifier
+<img src="/images/posts/0b1e79b037152325dfcb6cf44fe1f0f.png" alt="" />
+就是如果这个多端有一个加号的话，代表Lineno不能单独定义这个entity，需要saleno和lineno一起来定义这个entity</p>
+<h2 id="data-model-quality">Data model quality</h2>
+<p>nation-stock
+a lesson in pure geography
+family matter
+book
+a history lesson
+aircraft leasing 就是generalize lease</p>
+<h2 id="cardinality">Cardinality</h2>
+<p>![[8201500abdb57c50b9d5cfec6b5fb25.png]]
+就是○是表示可选
+横杆 | 是表示必须存在
+○靠近的一端是被可选的一端</p>
+<h2 id="entity-types">Entity Types</h2>
+<p>independent entity
+weak or dependent entity
+associative entity
+aggragate entity
+subordinate entity(动物里面有羊和牛，但是如果这个sub很重要就会变成independent entity)</p>
+<h2 id="generalization-and-aggregation">Generalization and Aggregation</h2>
+
+<h1 id="chapter-8-normalization-and-other-data-modeling-methods">Chapter 8 Normalization and Other Data Modeling Methods</h1>
+<h2 id="functional-dependency">Functional dependency</h2>
+<p>one or more attributes determine the value of another</p>
+<h2 id="normal-forms">Normal forms</h2>
+<p>The hierarchy of normal forms is 5NF(fifth normal forms), 4NF, BCNF(Boyce-Codd), 3NF, 2NF, and 1NF. Thus, 5NF is the outermost doll. DK/NK(domain-key normal form)</p>
+<h3 id="1nf">1NF</h3>
+<p>an attribute must have a single value
+<img src="/images/posts/af8d564d072d90c4202244771d10ac5.png" alt="" /></p>
+<h3 id="2nf">2NF</h3>
+<p><img src="/images/posts/df4e46ef7aaa2022b419bb418953b79.png" alt="" /></p>
+<h3 id="3nf">3NF</h3>
+<p><img src="/images/posts/8afeeba188cd1131077dd29f0157fb5.png" alt="" /></p>
+
+<h3 id="4nf">4NF</h3>
+<p><img src="/images/posts/031448434c774dbb814843efc6a23a1.png" alt="" /></p>
+<h3 id="boyce-codd">Boyce-Codd</h3>
+<p><img src="/images/posts/235c5cac41a70d08f0044984184f80a.png" alt="" /></p>
+<h1 id="chapter-9-the-relational-model-and-relational-algebra">Chapter 9 The Relational Model and Relational Algebra</h1>
+<p>The relational model
+data structure</p>
+<h2 id="integrity-rules">integrity rules</h2>
+<p>No component of the primary key of a relation may be null.
+A database must not contain any unmatched foreign key values.</p>
+<h1 id="chapter-10-sql">Chapter 10 SQL</h1>
+<p>structured query language</p>
+<h2 id="data-definition">Data Definition</h2>
+<p>Key: 它可以是主键和外键的一部分。组合键是同一表的一组有序列。换句话说， <code class="language-plaintext highlighter-rouge">lineitem</code> 的主键始终是（ <code class="language-plaintext highlighter-rouge">lineno</code> ， <code class="language-plaintext highlighter-rouge">saleno</code> ）按顺序组合而成，且无法更改。
+Index: An <strong>index</strong> is an ordered set of pointers to rows of a base table
+Notation</p>
+<h2 id="constraints-约束条件">Constraints 约束条件</h2>
+<h3 id="primary-key-constraint">Primary key constraint</h3>
+<h3 id="foreign-key-constraint">Foreign key constraint</h3>
+<p><img src="/images/posts/529b5c4b5872f87532b55c607ddbd41.png" alt="" />
+<img src="/images/posts/f48f49abd9b0980b97c8b7fd73e4992.png" alt="" /></p>
+<h3 id="unique-constraint">Unique constraint</h3>
+<p><img src="/images/posts/70f1ca83b6c93d42b3b8dec83577f6e.png" alt="" /></p>
+<h3 id="check-constraint">Check constraint</h3>
+<h2 id="data-types">Data Types</h2>
+<p>BOOLEAN
+Numeric
+String
+Datetime
+Object</p>
+<h2 id="scalar-functionsrdbms-manual">Scalar functions(RDBMS manual)</h2>
+<p><em>How many days’ sales are stored in the sale table?</em>
+<img src="/images/posts/d84fe30c0b685a10a9ba129aa224469.png" alt="" /></p>
+<h2 id="formatting">Formatting</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT shrfirm, shrprice, shrqty, FORMAT(shrdiv/shrprice*100,2)
+  AS yield
+    FROM share;
+</code></pre></div></div>
+<h2 id="table-commands">Table commands</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE base-table ADD column data-type;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP TABLE base-table;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE VIEW stklist
+AS SELECT stkfirm, stkprice FROM stock;
+</code></pre></div></div>
+<p>Index</p>
+<h2 id="select">SELECT</h2>
+<h2 id="group-by-and-having">GROUP BY and HAVING</h2>
+<h2 id="regexp">REGEXP</h2>
+<p>==case==</p>
+<h2 id="insert">INSERT</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO table [(column [,column] …)]
+VALUES (literal [,literal] …);
+</code></pre></div></div>
+<p><img src="/images/posts/4ba7f7f3351bab8600e10db586e59d5.png" alt="" />
+就是把download这个表里面选中的那些列，插入到stock这个表里面</p>
+<h2 id="update-1">UPDATE</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE stock
+SET stkqty = stkqty - 200000
+WHERE stkcode IN ('FC','BS','NG');
+</code></pre></div></div>
+<h2 id="delete-1">DELETE</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE FROM table
+    [WHERE condition];
+</code></pre></div></div>
+
+<h1 id="reference-sql-playbook">Reference SQL playbook</h1>
+
+<h1 id="chapter-11-spatial-and-temporal-data">Chapter 11 Spatial and Temporal Data</h1>
+<h1 id="spatial-data">Spatial data</h1>
+<h1 id="managing-spatial-data">Managing spatial data</h1>
+<p>SQL/MM Spatial
+Spatial Reference Support System</p>
+<h3 id="data-model-mapping">Data model mapping</h3>
+<p><img src="/images/posts/89ea5bda7777d8e1e85d7f8f1e8210d.png" alt="" /></p>
+<h4 id="srid">SRID</h4>
+<p>determine the method of calculating area or distance 比如欧式距离</p>
+<h4 id="geometric-functions">Geometric functions</h4>
+<p>ST_X()
+ST_Area()</p>
+<h4 id="geometry-collections">Geometry collections</h4>
+<p>1</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MULTIPOINT(9.0 6.1, 8.9 6.0)
+</code></pre></div></div>
+<p>2</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MULTIPOLYGON(((0 0,10 0,10 10,0 10,0 0)),((5 5,7 5,7 7,5 7, 5 5)))
+</code></pre></div></div>
+<p>3</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO table VALUES
+ST_GeomCollFromText('GEOMETRYCOLLECTION(POINT(1 1),LINESTRING(0 0,1 1,2 2,3 3,4 4))');
+</code></pre></div></div>
+<h3 id="r-tree">R-tree</h3>
+<p>是B树的扩展</p>
+<h3 id="managing-temporal-data">Managing Temporal Data</h3>
+<p>Transaction time: storing the time of change
+Valid time: post new prices some time before their effective date
+Bitemporal data: extra columns to record the upper and lowerr bounds for valid time and transaction time</p>
+<h3 id="times-remembered">Times Remembered</h3>
+<h4 id="temporal-data">Temporal data</h4>
+<p>Unanchored
+Anchored: Instant and Interval</p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">SQL｜ Quizzes</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Quizzes/" rel="alternate" type="text/html" title="SQL｜ Quizzes" /><published>2024-05-01T00:00:00+02:00</published><updated>2024-05-01T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Quizzes</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/05/01/SQL-Quizzes/"><![CDATA[<h1 id="quizzes-1">Quizzes 1</h1>
+<ol>
+  <li>一对多，哪个是FK？ The personid in CAR is the foreign key .</li>
+  <li>如果这个attribute只在一个表里出现，就不需要item.color了</li>
+  <li>
+    <p>GROUP BY
+ select max(sum(saleqty)) from qsale group by itemname (wrong)
+ Nesting functions for ‘group by’ data is not allowed</p>
+
+    <p>select count(* ) from qdel group by count(* ) order by splno desc;(wrong)
+ ‘Group by count(* )’ gives a syntax error, because the group by clause needs to target un-grouped attributes (and group them).
+ If the argument of group by was changed to ‘splno’, the query would be correct.</p>
+  </li>
+  <li>‘FROM’ should be followed by the name of a table or query, not of a column</li>
+  <li><img src="/images/posts/55ec30ef075580eb33903b05608fa49.png" alt="" /></li>
+  <li><img src="/images/posts/8cc3ca9aba4c005057b2fe55c135149.png" alt="" /></li>
+  <li>After ‘or’ there should be an expression, e.g. ‘or itemcolor = ‘white’. Instead, there is only a text string.</li>
+</ol>
+
+<h1 id="quizzes-2">Quizzes 2</h1>
+<p><img src="/images/posts/1bac2467a36b027a7ffb3922a7db33d.png" alt="" /></p>
+<ol>
+  <li>well-formed:  tell the reader about the role of attributes</li>
+  <li>Waston don’t show the FK, 但是还是有点别的要求。
+<img src="/images/posts/d213a0e6ef04014d39455a01e81c5f3.png" alt="" /></li>
+  <li>Table Book copy has two primary keys.(wrong)
+ 每个表只能有一个PK，但是这个PK可以有很多个attribute</li>
+  <li>the FKs to the mother tables also need to be part of the PK
+ 就是loan表里的tile, copy和borrower是引自别的表的，LOAN的外键，但是同时也是LOAN主键的一部分
+    <h1 id="quizzes-3">Quizzes 3</h1>
+  </li>
+  <li>一个员工可以是很多个部门的头，但是一个部门只能有一个头，员工是多端</li>
+  <li>就是不join还是不行<img src="/images/posts/bae67f2599a85455ffbcfa491adf4f8.png" alt="" /></li>
+  <li>&lt;&gt;就是不等于</li>
+  <li>ORDER BY 和GROUP BY
+  Give sales in descending order of saleqty.
+  select * from qsale<br />
+  order by saleqty desc;</li>
+  <li>COUNT() 和SUM（）
+ Give the ==total number of deliveries== per item
+ Count()只是计数行数， SUM()才是计算里面的
+ select itemname, sum(delqty) from qdel  <br />group by itemname</li>
+  <li>group by - having</li>
+  <li>就是是Head还是boss的问题<img src="/images/posts/ec812e4914cef8972c6a2aefe30104e.png" alt="" /></li>
+  <li>either or both black and white
+    <ol>
+      <li>where itemcolor in (‘Black’, ‘White’)</li>
+      <li>where itemcolor = ‘Black’ or itemcolor = ‘White’</li>
+      <li>select itemname from qitem<br />
+where itemcolor = “Black”
+union
+select itemname from qitem<br />
+where itemcolor = “White”;</li>
+    </ol>
+  </li>
+</ol>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">SQL｜Lecture 5 The Relation Model</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/27/SQL-Lecture-5-The-Relation-Model/" rel="alternate" type="text/html" title="SQL｜Lecture 5 The Relation Model" /><published>2024-04-27T00:00:00+02:00</published><updated>2024-04-27T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/27/SQL-Lecture%205%20The%20Relation%20Model</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/27/SQL-Lecture-5-The-Relation-Model/"><![CDATA[<p>The relational model is a meta-model
+described as E-R model
+domain, intergrity and operators to retrieve, derive, modify data</p>
+
+<p>A relation is a set of attributes(columns) and tuples(rows)
+relational database is a collection of relations or tables: intergrity rules(entity, referential)</p>
+
+<p>SQL
+How to make a SQL query
+steps:
+a. understand question (what tables / columns?)
+b. make query space (=data to test query)
+c. make query (=SQL)
+d. test query (does it yield what you expected?)</p>
+
+<p>SQL Syntax
+condition, operator, expression
+SQL constraints
+NOT NULL Constraint</p>
+
+<p>SQL IN operater:
+To specify multiple values in a WHERE clause
+Shorthand for multiple OR conditions</p>
+
+<p>JOIN
+INNER JOIN
+<img src="/images/posts/e5062a920fff6aa6dc6dca4b4828f26.png" alt="" />
+Group By
+aggregate functions: COUNT(), MAX(), MIN(), SUM(), AVG()</p>
+<h2 id="sql-routines">SQL Routines</h2>
+<p>RETURNS
+<img src="/images/posts/dade562868293319f3aef8d959967b3.png" alt="" /></p>
+
+<h2 id="triggers">Triggers</h2>
+<p>这是在讲SQL中的触发器。触发器是一种特殊类型的存储过程，它会在表上发生特定事件时自动执行，比如插入、更新或删除行。</p>
+
+<p>在你提供的例子中，描述了创建一个触发器，将更新记录到单独的 <code class="language-plaintext highlighter-rouge">stock_log</code> 表中。这个触发器会在 <code class="language-plaintext highlighter-rouge">stock</code> 表上执行更新操作时自动执行，并将一条记录插入到 <code class="language-plaintext highlighter-rouge">stock_log</code> 表中，记录股票代码、旧股价、新股价、旧股票数量、新股票数量以及更新的时间戳等详情。</p>
+
+<h2 id="security">Security</h2>
+<p>GRANT command is used to provide access or privileges on the database
+REVOKE command removes user access rights or privileges to the database objects</p>
+
+<h2 id="melt">Melt:</h2>
+<p>Melt操作将数据框（dataframe）从宽格式（wide format）转换为长格式（long format），即将列中的值转换为行中的值。
+在这个例子中，通过UNION ALL将游戏分数数据表（game_scores）中的两个球员（Player1和Player2）以及他们的得分（TeamScore）合并到一个新的数据表中。
+这个操作使得每个球员都有对应的得分，从而方便计算每个球员的平均得分。
+![[8bffd88c03f21fc0830865a0f4c200a.png]]</p>
+<h2 id="cast">Cast:</h2>
+<p>Cast操作是Melt的逆操作，它将数据从长格式转换回宽格式，通常涉及聚合操作。
+在这个例子中，没有直接展示Cast操作，但可以想象，如果想要将每个球员的平均得分重新转换为某种汇总形式（例如，每个球员的平均得分作为列而不是行），那么就可以使用Cast操作来实现。</p>
+
+<p>SQL weakness: loops</p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry><entry><title type="html">SQL｜Lecture 4 Data Modeling Basic Structures</title><link href="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/20/SQL-Lecture-4-Data-Modeliling-Basic-Strutures/" rel="alternate" type="text/html" title="SQL｜Lecture 4 Data Modeling Basic Structures" /><published>2024-04-20T00:00:00+02:00</published><updated>2024-04-20T00:00:00+02:00</updated><id>https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/20/SQL-Lecture%204%20Data%20Modeliling%20Basic%20Strutures</id><content type="html" xml:base="https://buliangzhang24.github.io/pages/Buliangzhang24/2024/04/20/SQL-Lecture-4-Data-Modeliling-Basic-Strutures/"><![CDATA[<h1 id="chapter-7-how-to-model-and-design-a-database">Chapter 7 how to model and design a database</h1>
+<h1 id="data-modelling">Data Modelling</h1>
+<p>= the art of database design</p>
+<h2 id="find-out">Find out</h2>
+<p>which facts : things (entiy). keep what (attribute), model what might happen, how the facts link (relationship)</p>
+<h2 id="not">Not</h2>
+<p>process, data flow, experimental design</p>
+<h2 id="make-a-database-metadata">Make a database metadata</h2>
+<p>identify the facts to be stored in the database
+client and analysit</p>
+<h2 id="building-blocks">Building Blocks</h2>
+<p>entity
+attribute
+relationship
+identifiers
+(+ and frim’boss 是什么？)
+Q</p>
+<h2 id="aim-1-a-well-formed-data-model">Aim 1 a well formed data model</h2>
+<p>Construction rules obeyed
+No ambiguity</p>
+<h2 id="aim-2-a-high-fidelity-image">Aim 2 a high fidelity image</h2>
+<p>faithfully describes the world
+relationships
+data model is complete, understandable and accurate
+make sense</p>
+<h2 id="7-habits-of-highly-effective-data-modellers">7 habits of highly effective data modellers</h2>
+<p><img src="/images/posts/89dbf2d2857a9aeb9f5809da2b3896a.png" alt="" /></p>
+
+<h3 id="integrate">Integrate</h3>
+
+<p>more than one capital
+same name cities
+label these relationship</p>
+<h1 id="normalization">Normalization</h1>
+<p>Bottom-up
+Grouping the attributes in tables so that Every non-PK 
+attributes depends on 
+– the PK, 
+– the whole PK (if multi-attribute), 
+– and nothing but the PK</p>
+<h2 id="generalize">Generalize</h2>
+<p>man and woman can be generelized as person
+child /// single marriage</p>
+<h2 id="cardinality-and-modelity">Cardinality and Modelity</h2>
+<p>cardinality range of instances
+modelity participating instances
+<img src="/images/posts/23527af291d9e98d666491360623ec0.png" alt="" />
+<img src="/images/posts/a260e58eff2aaa7de24c1bb27931782.png" alt="" />
+<img src="/images/posts/51a4710dd4e60f33c54b7672c477211.png" alt="" /></p>]]></content><author><name>Xinyi He</name></author><category term="SQL" /><summary type="html"><![CDATA[None]]></summary></entry></feed>
