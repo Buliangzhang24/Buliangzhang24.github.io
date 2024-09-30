@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜7.Radar remote sensing for forest monitoring
+categories: [Advanced Earth Observation]
+description: None
+keywords: Radar remote sensing for forest monitoring
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Exercise
 ## 1. Visualization
 ### 直方图的分布类型

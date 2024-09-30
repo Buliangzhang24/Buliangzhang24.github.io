@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜3.Photogrammetry
+categories: [Advanced Earth Observation]
+description: None
+keywords: Photogrammetry
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Exercise
 ## 一. SfM photogrammetry of UAV data in Agisoft Metashape 
 ### 1. Import photos

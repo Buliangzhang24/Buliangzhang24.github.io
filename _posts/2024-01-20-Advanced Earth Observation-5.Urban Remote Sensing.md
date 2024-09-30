@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜5.Urban Remote Sensing
+categories: [Advanced Earth Observation]
+description: None
+keywords: Urban Remote Sensing
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 ## SDG(Sustainable Development Goals) 11
 5 main areas: 
 1. Social development

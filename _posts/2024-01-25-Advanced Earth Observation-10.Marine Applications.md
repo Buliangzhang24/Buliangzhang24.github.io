@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜10.Marine Applications
+categories: [Advanced Earth Observation]
+description: None
+keywords: Marine Applications
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 ## Harmful Algal Blooms有害藻华
 ### What is algal blooms
 Algal blooms are the rapid growth of algae藻类 or cyanobacteria蓝藻

@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜4.Thermal infrared  remote sensing
+categories: [Advanced Earth Observation]
+description: None
+keywords: Thermal infrared  remote sensing
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Exercise 4
 ##### Why UAV thermal imaging can monitor vegetation stress?
 It sensitivity to disruptions in stomatal conductance

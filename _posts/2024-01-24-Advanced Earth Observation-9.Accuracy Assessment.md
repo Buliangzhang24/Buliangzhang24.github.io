@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜9.Accuracy Assessment
+categories: [Advanced Earth Observation]
+description: None
+keywords: Accuracy Assessment
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Exercise
 基于分层抽样的估计地图精度，估计面积和置信区间
 ## 1. Accuracy estimation based on sample counting

@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜6.Time series analysis
+categories: [Advanced Earth Observation]
+description: None
+keywords: Time series analysis
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Exercise
 ## Preprocessing
 ### Creating a raster brick and cleaning the MODIS data using the reliability layer

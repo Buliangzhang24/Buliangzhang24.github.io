@@ -1,3 +1,16 @@
+---
+layout: post
+title: Advanced Earth Observation｜8.Biomass monitoring with satellite radar
+categories: [Advanced Earth Observation]
+description: None
+keywords: Biomass
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
 # Exercise
 geolocated coherence
 backscatter images 
