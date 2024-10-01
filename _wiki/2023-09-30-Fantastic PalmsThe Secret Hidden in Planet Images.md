@@ -1,16 +1,16 @@
 ---
 layout: post
 title:Fantastic Palms: The Secret Hidden in Planet Images
-categories: MachineLearning
+categories: [DeepLearning]
 description: None
-keywords: MachineLearning
+keywords: DeepLearning
 mermaid: false
 sequence: false
 flow: false
 mathjax: false
 mindmap: false
 mindmap2: false
-topmost: true
+topmost: false
 ---
 
 # Geoscripting project repository
