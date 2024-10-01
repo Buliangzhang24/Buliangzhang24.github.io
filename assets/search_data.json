@@ -533,6 +533,14 @@
     } ,
   
     {
+      "title"    : "Evaluating the effectiveness of different vegetation indices for LAI estimation",
+      "category" : "LAI",
+      
+      "url"      : "https://buliangzhang24.github.io/wiki/2024-02-20-Evaluating%20the%20effectiveness%20of%20different%20vegetation%20indices%20for%20LAI%20estimationr/",
+      "keywords" : "LAI, vegetation indices"
+    } ,
+  
+    {
       "title"    : "Environmental Geocaching",
       "category" : "VR",
       
@@ -554,6 +562,14 @@
       
       "url"      : "https://buliangzhang24.github.io/wiki/2024-09-30-CV/",
       "keywords" : "CV"
+    } ,
+  
+    {
+      "title"    : "Wiki Template",
+      "category" : "",
+      
+      "url"      : "https://buliangzhang24.github.io/wiki/template%20(copy)/",
+      "keywords" : "keyword1, keyword2"
     } ,
   
     {
