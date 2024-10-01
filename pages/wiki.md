@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Projects
+title: Project
 description: 人越学越觉得自己无知
 keywords: 维基, Wiki
 comments: false
@@ -9,8 +9,9 @@ menu: 维基
 permalink: /wiki/
 ---
 
->Every part of the journey contributes to our growth.
+> Every part of the journey contributes to our growth.
 
+{% case site.components.wiki.view %}
 {% when 'list' %}
 
 <ul class="listing">
