@@ -11,12 +11,12 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
-![](/images/posts/5e52b6a919ca434c2ea22a742cedc0a.png)![[cd673ddf50ef87de550f7a2cba69a53.png]]
+![](/images/posts/cd673ddf50ef87de550f7a2cba69a53.png)
 # Separating Hyperplanes
 - when you want to find a decision boundary, avoid estimating densities
 - linear decision boundry,就是设置这个式子为0，就是它的decision boundry
 hyperplanes separate feature space into regions
-![[ca46b3d627febe82dbbee7126a1c74a.png]]
+![](/images/posts/ca46b3d627febe82dbbee7126a1c74a.png)
 - for new X, 可以带入最后一个式子，然后看y=1,还是y=-1来分类
 **exercise**1. This problem involves hyperplanes in two dimensions.
 (a) Sketch the hyperplane 1 + 3X1 − X2 = 0. Indicate the set of
@@ -47,12 +47,12 @@ maximize the margin（尝试最大边际化）, under the constraint that traini
 - Solution: ==allow (some, small) errors on the training set,==introducing slack （松弛）variables ∊i ≥ 0>>>Add slack variables to maximum margin classifier, but limit total slack to C: the trade-off parameter 
 - 变化：M>> M(1-e)，然后引入一个C，误差平方和<=C
 - C influence solution: There is no a prori best choice for C
-![[7b9e34d7c7461765eca88a763603261.png]]
+![](/images/posts/57b9e34d7c7461765eca88a763603261.png)
 ### The multi-class case
 - one-versus-one
 - one- versus-all
 **exercise** 
-![[b5b665fde36990c4b2cb1fd1525e3e6.png]]
+![](/images/posts/b5b665fde36990c4b2cb1fd1525e3e6.png)
 ### Optimization(optional)
 从最大化M(margin)到最小化一个系数w和常数b的平方和
 但是为了解决is a (large) quadratic programming (QP) problem
@@ -64,12 +64,12 @@ Ideal: classes may become linearly separable if <mark class="hltr-green">higher 
 - feature是要平方还是开方，等等，我不知道 
 - efficiently train the SVC,就是p= 10 ,如果要3次，就会有286种组合方式了
 ### The Kernel Trick
-![[4a4865d0f12df10785319a4f7353e67.png]]
+![](/images/posts/4a4865d0f12df10785319a4f7353e67.png)
 训练阶段，我们需要计算所有训练样本之间的内积，如 xi 和 xi' 之间的内积。训练完成后，当我们需要对新的样本进行分类时，我们只需要计算支持向量 (support vectors) 与新样本之间的内积。
-![[bc20a49a601a7f34eaf96a7d8938959.png]]
+![](/images/posts/bc20a49a601a7f34eaf96a7d8938959.png)
 引入一个用于泛化的核函数Think of kernel functions as similarities: large when the inputs are very alike, small when they are not
-![[ff68f02e96fdb61695f150a047643ef.png]]
-![[50b2ca5c56b26fa1a3d05635b85e2dd.png]]
+![](/images/posts/ff68f02e96fdb61695f150a047643ef.png)
+![](/images/posts/50b2ca5c56b26fa1a3d05635b85e2dd.png)
 到这一步了，才有两种方法可以选择K（x_i, x）
 - Polynomial kernel
 - Radial kernel
@@ -79,7 +79,7 @@ What kernel functions should we use?
 type: prior knowledge of problem, trial-and-error
 parameters: cross-validation, like for C
 **exercise**
-![[f915649b7e14afa4dc5ab759f53800c.png]]
+![](/images/posts/f915649b7e14afa4dc5ab759f53800c.png)
 ## More Kernels
 A large number of kernels have been proposed,not limited to numerical/vector data!
 ● Vector kernels

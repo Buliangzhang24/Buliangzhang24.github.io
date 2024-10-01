@@ -1,7 +1,7 @@
 ---
 layout: post
 title: eXtendedRealities｜ Introduction
-categories: [eXtended Realities]
+categories: [eXtendedRealities]
 description: None
 keywords:  Introduction
 mermaid: false

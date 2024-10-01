@@ -15,9 +15,9 @@ mindmap2: false
 # 8 Cross-Validation
 1. 生成数据集
 2. 设置随机种子，然后计算使用最小二乘拟合以下四个模型（增加次数的一次到四次的多项式）所产生的 LOOCV 误差
-    ![[8a12a3b6920d745aa3dc8c5ac9d91b2.png]]
+![](/images/posts/8a12a3b6920d745aa3dc8c5ac9d91b2.png)
 3. 使用最小二乘法拟合以上的每个模型所产生的系数估计值的统计显着性。这些结果与基于交叉验证结果得出的结论一致吗？
-     ![[0d0d451665de7e96251ac828dfe981c.png]]
+![](/images/posts/0d0d451665de7e96251ac828dfe981c.png)
      得出的结论X1和X2的t统计值的绝对值是最大的， 所以对应了二次项
 # 9. 
 1. 直接计算数据集的std 和mean
@@ -101,4 +101,4 @@ mindmap2: false
      `print("Minimum test set MSE = {} at {} features".format(np.min(tst_errors), np.argmin(tst_errors)+1))`
 5. <mark class="hltr-red">测试集 MSE 最小化的模型与用于生成数据的真实模型相比如何？对系数值进行评论???</mark>
 6.  创建一个图，显示 r 值范围的 ∑pj=1(βj−β^rj)2−−−−−−−−−−−−√ ，其中 βrj 是最佳模型的第 j 系数估计值包含 r 系数。评论你所观察到的事情。这与 的测试 MSE 图相比如何？
-     ![[617ccab94fb32d28a5da45066d0bc40.png]]
+     ![](/images/posts/617ccab94fb32d28a5da45066d0bc40.png)
