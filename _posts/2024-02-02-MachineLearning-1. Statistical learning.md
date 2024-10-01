@@ -61,7 +61,7 @@ dis:
 2. risk of ==overfitting== modelling 了 the nosie e (don' t have enough data)
 Overfitting是指模型在训练数据上表现很好，但在测试数据（或新数据）上表现较差的现象，因为噪声等>>指模型过于复杂，过度拟合了训练数据中的噪声和细微特征的情况。
 Overfitting 的原因有： 模型过于复杂，训练数据量不足，特征选择不当，训练数据和测试数据的分布不一致
-![[737a24037115d610d6b55c525374370.png]]
+![](/images/posts/737a24037115d610d6b55c525374370.png)
 ## Supervised vs Unsupervised Learning
 最大区别在有没有标签
 # Assessing Model Accuracy
@@ -73,11 +73,11 @@ Overfitting 的原因有： 模型过于复杂，训练数据量不足，特征�
 - training MSE isnot important: 增加模型的灵活性可以使其更容易适应复杂的数据模式和关系，从而可能降低训练 MSE。more flexiblity  less taining MSE。
 - test MSE(unseen) different parts of field
 - ==goal: select the model with the smallest<mark class="hltr-green"> test MSE</mark>==
-![[8edabe3d0987a7a37cb37de6b2494ca.png]]
+![](/images/posts/8edabe3d0987a7a37cb37de6b2494ca.png)
 Underfitting:模型过于简单，无法捕捉数据中的真实模式和关系的情况。欠拟合的模型通常对训练数据和测试数据的表现都较差
 Overfitting:模型过于复杂，过度拟合了训练数据中的噪声和细微特征的情况。过拟合的模型在训练数据上表现很好，但在未见过的测试数据上表现较差
 ## Bias vs. variance
-![[860be21fdebfc9318057e0881fc7d5d.png]]
+![](/images/posts/860be21fdebfc9318057e0881fc7d5d.png)
 因为Biase和variance，所以MSE才是U形的
 ### Bias : model too simple
 - Bias refers to the error that is introduced by approximating a real-life problem by a too simpler model真实值和期望值之间的差异
@@ -89,7 +89,7 @@ Overfitting:模型过于复杂，过度拟合了训练数据中的噪声和细�
 - more flexible methods have higher variance
 ==more flexible, less bias, more variance==
 Good test set performance requires ==low variance as well as low squared bias.==
-![[04ce4e8bb2e16bc6e413ec0d16581f9.png]]
+![](/images/posts/04ce4e8bb2e16bc6e413ec0d16581f9.png)
 (a) inflexible biase >><mark class="hltr-red">fiexible </mark>
 Flexible is generally better. 
 A flexible method has many degrees of freedom, so it can follow the patterns in the data, even if they are highly non-linear. 
@@ -101,7 +101,7 @@ predictor 量少：当预测变量的数量较少时，意味着数据可能具�
 (c) flexible
 (d) inflexible (flexible model>> there lots of nosiy  >> fiting the nosiy)
 就是用对了，就是low,low。
-![[b67f650f37b2f3d0d6f112246fcc8f5.png]]
+![](/images/posts/b67f650f37b2f3d0d6f112246fcc8f5.png)
 ### For Classification Setting
 Instead of MSE, we get ==error rate==:I= 1 if the pefect model
 Again, there is a ==training error rate and a test error rate==. 
@@ -113,7 +113,7 @@ They express the fraction of incorrect classifications不正确分类的比例
 - Test set to test the performance of the model on an ==independent ==part of the data set. To get an estimate on how good it will ==work in practice==
 ### with limited amount of data 少量数据
 可以用 cross validation
-![[74721a6689f929962208e7a3b8ca670.png]]
+![](/images/posts/74721a6689f929962208e7a3b8ca670.png)
 
 
 

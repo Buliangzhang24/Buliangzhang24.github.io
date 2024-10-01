@@ -24,15 +24,15 @@ leaf nodes:
 A leaf node indicates the end of a sequence of decisions
 A single (output) class is associated to each leaf node
 ## Algorithm to make predictions
-![[66c68d76a596659140c2d38d0326bbb.png]]
+![](/images/posts/66c68d76a596659140c2d38d0326bbb.png)
 ## Increasing node purity
 every decision should increase the node purity
 ### Quantifying Node Purity
 Measuring Node Purity
 - Low Entropy: more pure;Higher Entropy: less pure>>H(p) how flat
 - Gini Index: higher gini index ,less pure
-![[f365b77a8cb7cc4a22d13ad62d2231e.png]]
-![[c4449526b1dcb9a2458ef1c41d9fc19.png]]
+![](/images/posts/f365b77a8cb7cc4a22d13ad62d2231e.png)
+![](/images/posts/c4449526b1dcb9a2458ef1c41d9fc19.png)
 0.25* 0.75 4 times
 0.45* 0.55  2 times + 0.05 * 0.95 2 times
 ## Regression Trees
@@ -41,7 +41,7 @@ sample variance as node purity,high variance before splitting, low variacne afte
 ## Classification versus Regression Trees
 ## How to find the thresholde t?
 Try different thresholds
-optimum as best recordede threshold![[f4313c7f3b7060b0b96d5e09bb6fc92.png]]
+optimum as best recordede threshold![](/images/posts/f4313c7f3b7060b0b96d5e09bb6fc92.png)
 ## Binary Splitting
 we test as many thresholds as we have points
 ![[ab2533bf07de0f47d6c10fc874cc20f.png]]
@@ -116,9 +116,9 @@ Idea:
     Each tree has different decision rules
     Interpreting many decision rules in parallel is difficult
 - Strategy: Measure the <mark class="hltr-blue">increase in node purity across trees </mark>
-- ![[7010e107b505f8fef371cbe4e3f6219.png]] 就是看每个感兴趣点（橘色点）的node purity，然后求平均
+- ![](/images/posts/7010e107b505f8fef371cbe4e3f6219.png) 就是看每个感兴趣点（橘色点）的node purity，然后求平均
 ##### if bagging trees are still highly correlated with each other
-![[Pasted image 20240226091312.png]]
+![](/images/posts/Pasted image 20240226091312.png)
 
 #### Step 2 Random forest
 - Idea: increase diversity by removing features from individual trees (removing the root node , to increase diversity)
@@ -142,9 +142,9 @@ Idea:
 - Combines many “weak learners”
 - some stumps are weighted higher than others
 - each stump takes the previous stumps into account
-![[6122295845e0fc7d25e6f98889b33de.png]]
-![[ffc41bc78dda2f930d891bd74eb8cdd.png]]
-![[d7ec32aa303a927332cc68cfd93669e.png]]
+![](/images/posts/6122295845e0fc7d25e6f98889b33de.png)
+![](/images/posts/ffc41bc78dda2f930d891bd74eb8cdd.png)
+![](/images/posts/d7ec32aa303a927332cc68cfd93669e.png)
 
 
 

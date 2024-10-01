@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜ Lecture 5 immersive composition
-categories: [RemoteSensing]
+title: eXtendedRealities｜ Lecture 5 immersive composition
+categories: [eXtendedRealities]
 description: None
 keywords:  immersive composition
 mermaid: false

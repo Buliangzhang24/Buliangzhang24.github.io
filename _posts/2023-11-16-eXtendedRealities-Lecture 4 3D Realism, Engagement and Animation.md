@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜ Lecture 4 3d realism, engagement and animation
-categories: [RemoteSensing]
+title: eXtendedRealities｜ Lecture 4 3d realism, engagement and animation
+categories: [eXtendedRealities]
 description: None
 keywords:  3d realism, engagement and animation
 mermaid: false

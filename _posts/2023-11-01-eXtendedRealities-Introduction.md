@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜ Introduction
-categories: [RemoteSensing]
+title: eXtendedRealities｜ Introduction
+categories: [eXtended Realities]
 description: None
 keywords:  Introduction
 mermaid: false

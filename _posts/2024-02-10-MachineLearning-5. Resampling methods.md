@@ -59,20 +59,20 @@ Here we ==randomly== divide the available set of samples into two parts: a ==tra
 - We leave out part k, fit the model to the otherK − 1 parts (combined), and then obtain predictions for the left-out kth part
 - CV(K)
 ## Algorithm
-![[ff05b5c22a054f8e811eee32315b7f9.png]]
+![](/images/posts/ff05b5c22a054f8e811eee32315b7f9.png)
 - we are interested only in the location of the minimum point in the estimated test MSE curve
 ## K-fold cross-validation
 - Since each training set is only (K − 1)/K as big as the original training set, the prediction error will typically be biased upwards. Why? 
      ==Bias is increased by reducing the data set ==
 -  This ==bias is minimized when K = n (LOOCV), but this estimate has high variance ==(since all training sets are nearly equal, so the MSE’s are highly correlated, and depend much on which data set is used)
 - K = 5 or 10 provides a good compromise for the bias-variance trade-off
-![[8f1efdf723e520b4db9ecbbc0d4050b.png]]
+![](/images/posts/8f1efdf723e520b4db9ecbbc0d4050b.png)
 # The Bootstrap
 - data set is too small
 - The bootstrap can be used to ==estimate the uncertainty associated with a given estimator== or statistical learning method
 - The bootstrap works by==repeatedly== sampling from the same data set, thereby creating multiple data sets
 就是有放回抽样
-![[f6a78ccd91fcac3b53a4b82b8704b55.png]]
+![](/images/posts/f6a78ccd91fcac3b53a4b82b8704b55.png)
 - minimize the risk (反正就有个公式)
 ### Time series
  if the data is a time series, we can’t simply sample the observations with replacement. Why not? 
@@ -104,7 +104,7 @@ Is this allowed?
 ????
 
 **exercise 5.1**
-![[5d8d3fff1e9e95a10ae6e1c49182aeb.png]]
+![](/images/posts/5d8d3fff1e9e95a10ae6e1c49182aeb.png)
 有个斜率为0， df(x)/dx
 **exercise 5.2**
 Suppose that we obtain a bootstrap sample from a set of n observations What is the probability that the first bootstrap observation is not the jth observation from the original sample?What is the probability that the second bootstrap observation is not the jth observation from the original sample?

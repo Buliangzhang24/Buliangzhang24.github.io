@@ -52,7 +52,7 @@ y ̂=β ̂0+β ̂1x
 置信区间用于估计==参数==的不确定性范围
 ### Prediction Interval
 预测区间用于估计未来==观测值==的不确定性范围。
-![[4112b79e66fc7ca74f309cc62257ffb.png]]
+![](/images/posts/4112b79e66fc7ca74f309cc62257ffb.png)
 ## Hypothesis testing
 - 描述
     H_0:There is no relationship between X and Y  versus the alternative hypothesis
@@ -114,7 +114,7 @@ Try to ==add== one variable: Y=β_0+β_1X1, Y=β_0+β_2X2, Y=β_0+β_3X_3
 Pick the one-variable model with ==lowest RSS ==
 ==Repeat== to get best two-variable model
 ==Stop== when none of the remaining variables have a significant contribution就是当p大于0.05之后
-![[c5d6de717dd0a830e1a203b9a489a4b.png]]
+![](/images/posts/c5d6de717dd0a830e1a203b9a489a4b.png)
 #### Backward selection
 Start with ==all variables== in the mode
 ==Remove variable== with ==the largest p-value==
@@ -138,9 +138,9 @@ Three causes of prediction uncertainty
 ## Qualitative predictors定性
 #### dummy variables
 虚拟变量来数学表示qualitative predictors
-![[aa630840eb9582e024e6dab76da17ba.png]]
+![](/images/posts/aa630840eb9582e024e6dab76da17ba.png)
 #### Dummy variables for more than two levels
-![[876895fdf570605c06a4816133f120c.png]]
+![](/images/posts/876895fdf570605c06a4816133f120c.png)
 ## Interaction Terms
 #### Assumptions of linear regression model:
 - ==Additive:== the influence of Xj on Y is independent of other variables
@@ -148,34 +148,34 @@ Three causes of prediction uncertainty
 #### extra interaction
 Y=β_0+β_1X1+β_2X2X3+ε. 
 This model is not additive anymore, and ==nonlinear ==in the variables. However, it is still linear in the coefficients.
-![[1dfdfa2e04eca48daef87646b149266.png]]
+![](/images/posts/1dfdfa2e04eca48daef87646b149266.png)
 ## Polynomial Regression/cubic
 Nonlinear relationships can be modelled by polynomial regression.
 
 **Exercise 3**
-![[1b97c68e10e04809a6f393379ac4e32.png]]
-![[7e4a6f9f8df493c378917222c8bc2ef.png]]
+![](/images/posts/1b97c68e10e04809a6f393379ac4e32.png)
+![](/images/posts/7e4a6f9f8df493c378917222c8bc2ef.png)
 **False: Since the ocefficient for the GPA**
 **Exercise 4**
 **cubic and linear**
-![[b273348e912b8b8d7bdcf56877bdbc0.png]]
+![](/images/posts/b273348e912b8b8d7bdcf56877bdbc0.png)
 # Inspecting data and model可能会出现的问题
 ## 1. Nonlinearity非线性
 ==Residual plots== can be useful to identify nonlinearity of the data
-![[ae13fe312232db06d2cc7175d7a039f.png]]
-![[Pasted image 20240213191216.png]]
+![](/images/posts/ae13fe312232db06d2cc7175d7a039f.png)
+![](/images/posts/Pasted image 20240213191216.png)
 都是和intercept那个线来比较，来求距离。
 ==The residuals ==ei=y_i−y ̂_1 of the linear fit (left) show a strong pattern. ==Quadratic fit ==(right) has more equally distributed residuals.
 ## 2. Correlation of error terms相关性
 - 两个independent variable之间有没有关系
 - ==Important assumption==: for each observation j, the ==error terms εj are uncorrelated==. This assumption is not always true. 
 - <mark class="hltr-green">In time series data</mark>, residuals are often ==correlated==, which causes ==tracking== – adjacent residuals show similar values 
-![[c4a7a93844ec171584daf697fbb5d91.png]]
+![](/images/posts/c4a7a93844ec171584daf697fbb5d91.png)
 ## 3.Nonconstant error variance: 异方差性
 - Important assumption: constant variance Var(εi)=σ2  for all i. 
 - This does not always hold true ：<mark class="hltr-green">heteroscedasticity</mark>
 - A possible way to ==solve== this is by transformation of Y  such as log⁡(Y) or √Y
-![[531e4f7657a56e1634ecd3a7e0b6543.png]]
+![](/images/posts/531e4f7657a56e1634ecd3a7e0b6543.png)
 ## 4. Outliers离群值
 - ==Outliers==: points yi that are far from the value predicted by the model
 - ==Possible caused==: incorrect measurements or recordings

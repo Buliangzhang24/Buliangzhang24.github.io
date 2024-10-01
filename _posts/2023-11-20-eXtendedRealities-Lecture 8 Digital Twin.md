@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜Lecture 8 digital twin
-categories: [RemoteSensing]
+title: eXtendedRealities｜Lecture 8 digital twin
+categories: [eXtendedRealities]
 description: None
 keywords:  digital twin
 mermaid: false

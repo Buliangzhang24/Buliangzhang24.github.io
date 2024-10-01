@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜ Lecture 2 foundations of 3d
-categories: [RemoteSensing]
+title: eXtendedRealities｜ Lecture 2 foundations of 3d
+categories: [eXtendedRealities]
 description: None
 keywords:  foundations of 3d
 mermaid: false

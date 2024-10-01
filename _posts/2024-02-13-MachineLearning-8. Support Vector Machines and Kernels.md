@@ -11,7 +11,7 @@ mathjax: false
 mindmap: false
 mindmap2: false
 ---
-![[cd673ddf50ef87de550f7a2cba69a53.png]]
+![](/images/posts/5e52b6a919ca434c2ea22a742cedc0a.png)![[cd673ddf50ef87de550f7a2cba69a53.png]]
 # Separating Hyperplanes
 - when you want to find a decision boundary, avoid estimating densities
 - linear decision boundry,就是设置这个式子为0，就是它的decision boundry

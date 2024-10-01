@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜Lecture 9 tno innovation for life
-categories: [RemoteSensing]
+title: eXtendedRealities｜Lecture 9 tno innovation for life
+categories: [eXtendedRealities]
 description: None
 keywords:  tno innovation for life
 mermaid: false

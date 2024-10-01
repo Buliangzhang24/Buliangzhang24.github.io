@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜Lecture 10 evaluating immersive experiences
-categories: [RemoteSensing]
+title: eXtendedRealities｜Lecture 10 evaluating immersive experiences
+categories: [eXtendedRealities]
 description: None
 keywords:  evaluating immersive experiences
 mermaid: false

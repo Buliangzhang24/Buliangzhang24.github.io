@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜Lecture 7 immersive geo Visualization
-categories: [RemoteSensing]
+title: eXtendedRealities｜Lecture 7 immersive geo Visualization
+categories: [eXtendedRealities]
 description: None
 keywords:  immersive geo Visualization
 mermaid: false

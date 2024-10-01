@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜ Lecture 3 immersive technologies
-categories: [RemoteSensing]
+title: eXtendedRealities｜ Lecture 3 immersive technologies
+categories: [eXtendedRealities]
 description: None
 keywords:  immersive technologies
 mermaid: false

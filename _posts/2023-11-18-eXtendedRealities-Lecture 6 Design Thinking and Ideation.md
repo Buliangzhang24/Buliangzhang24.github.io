@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RemoteSensing｜Lecture 6 design thinking and ideation
-categories: [RemoteSensing]
+title: eXtendedRealities｜Lecture 6 design thinking and ideation
+categories: [eXtendedRealities]
 description: None
 keywords:  design thinking and ideation
 mermaid: false

@@ -31,20 +31,20 @@ main idea: predict probability
 P(Y=1| X=..)
 ## Logistic function
 - S-shaped curve between 0 and 1:
-![[Pasted image 20240214104238.png]]
+![](/images/posts/Pasted image 20240214104238.png)
     这里Linear regression 范围会小于0，但是它的意义是概率
 - How do we see that the curves have same B0?
     They cross the x= 0 at same point
 - Is B0 >0 or B0 <0?
     if at the mentioned point the Y value is smaller than 0.5 , the B0<0
-![[f241f122c9709f63d673fddf84a0a00.png]]
+![](/images/posts/f241f122c9709f63d673fddf84a0a00.png)
 temperature of meidian low and high
 ## Odds
 The ratio of the probability of one event to that of an alternative event
-![[Pasted image 20240214110223.png]]
+![](/images/posts/Pasted image 20240214110223.png)
 ### Logistic function leads to logit that is linear in X
 Logit = log(Odds)
-![[Pasted image 20240214110419.png]]
+![](/images/posts/Pasted image 20240214110419.png)
 B1 in linear regression: gives average change of Y associated with one-unit increase in X
 B1 in logistic regression: gives average change of log odds (logit) with one-unit increase in X
 
@@ -70,14 +70,14 @@ how can we set decision boundary?this line will be 0.5?
      The assumption of L :  independent
     Optimal parameters given data: <mark class="hltr-red">those that maximize L BUT，Instead of maximizing L, maximize log(L)</mark>
 ### 推导：
-![[6cb44ed757822986510c4239449ace9.jpg]]
-![[a69234fd8b167baaac1b123bc0a1c36.png]]
+![](/images/posts/6cb44ed757822986510c4239449ace9.jpg)
+![](/images/posts/a69234fd8b167baaac1b123bc0a1c36.png)
 ### 最后：
 当log(L)的负值最小（NLL negativate log-likelihood）的时候,或者Log-likelihood 的值最大的时候（就是越大越好，但是值是负的），逻辑函数通过优化算法（literative algorithm）之后，找到最好的b1,b2这些参数。
-![[d25fb115cb39703eb74b105ddf8aba3.png]]
+![](/images/posts/d25fb115cb39703eb74b105ddf8aba3.png)
 这个式子的变形是：log (p  /1−p) = β0 + β1X1 + β2X2
 这里面的p的含义是
-![[87a6c2e2b78cf77b056ec1038046b55.png]]
+![](/images/posts/87a6c2e2b78cf77b056ec1038046b55.png)
 这个才我们要maximize的
 # Some Consideration
 ### Interpretation of coefficient

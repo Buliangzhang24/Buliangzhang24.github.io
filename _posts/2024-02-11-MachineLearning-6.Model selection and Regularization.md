@@ -63,7 +63,7 @@ AIC
 BIC
 Adjustes R^2
 ### One standard-error rule
-![[38046a12348c1f0c3e0b13fcbd5f395.png]]
+![](/images/posts/38046a12348c1f0c3e0b13fcbd5f395.png)
 **Exercise**
 1.We perform best subset, forward stepwise, and backward stepwise selection on a single data set. For each approach, we obtain p + 1 models, containing 0, 1, 2,...,p predictors. Explain your answers:
 (a) Which of the three models with k predictors has the smallest
@@ -86,11 +86,11 @@ reduced variance
 - adjust coefficients so that some features are used to a lesser extent (or not at all)
 - Alternative to subset selection:shrink coefficients towards zero by constraining or regularizing 
 ## Ridge Regression
-![[5f76602c2bd4d5840473f4bdfada468.png]]
+![](/images/posts/5f76602c2bd4d5840473f4bdfada468.png)
 - 第二项是shrinkage penalty: 当B接近0， 这个也很小
 - Tuning parameter alamda control relative impact: 为0 就是普通的least squares, 无限大就all 𝛽=s will be zero (only intercept estimated)
 - Selecting 𝜆 is critical: use cross-validation
-![[2f3a0d80981ccd473cdd2bbe362b468.png]]
+![](/images/posts/2f3a0d80981ccd473cdd2bbe362b468.png)
 ### Scaling
 - Standard least squares is scale equivariant: multiplying 𝑋𝑗 by a constant 𝑐 means 𝛽𝑗 scales by a factor of 1/𝑐: 𝑋𝑗 𝛽𝑗 will remain the same.
 - Ridge regression is scale-sensitive, due to the penalty
@@ -98,7 +98,7 @@ reduced variance
 ### Bias-variance
 - Ridge regression reduces flexibility: decreases variance at the cost of increased bias
 - 𝜆 controls flexibility of predictor
-![[d5dfa2fb2799146edd09a4994ea7a43.png]]
+![](/images/posts/d5dfa2fb2799146edd09a4994ea7a43.png)
 <mark class="hltr-blue">With increasing dataset size,variance component decreases, bias stays the same flexibility </mark>
 variance 是关注敏感度，bias是关注灵活度，如果数据变多，variance就会更不敏感，所以就下降。
 ## The Lasso
@@ -149,4 +149,4 @@ Consequence: given a certain number of samples there is an optimal number of fea
 ## Model performance vs. flexibility
  largest risk in modelling is overfitting就是因为对训练集拟合的太好了，导致不能很好的泛化别的数据集了
  Model overfits when it performs (much) better on training data than on test data
- ![[424cf1397ff85d83912dbf1504b867b.png]]
+ ![](/images/posts/424cf1397ff85d83912dbf1504b867b.png)
