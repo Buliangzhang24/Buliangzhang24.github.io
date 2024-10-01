@@ -526,10 +526,26 @@
   
     {
       "title"    : "Fantastic palmsthe secret hidden in planet images",
-      "category" : "MachineLearning",
+      "category" : "DeepLearning",
       
       "url"      : "https://buliangzhang24.github.io/wiki/2023-09-30-Fantastic%20PalmsThe%20Secret%20Hidden%20in%20Planet%20Images/",
-      "keywords" : "MachineLearning"
+      "keywords" : "DeepLearning"
+    } ,
+  
+    {
+      "title"    : "Environmental Geocaching",
+      "category" : "VR",
+      
+      "url"      : "https://buliangzhang24.github.io/wiki/2024-04-20-Environmental%20Geocaching/",
+      "keywords" : "VR"
+    } ,
+  
+    {
+      "title"    : "TheNavySeals",
+      "category" : "DeepLearning",
+      
+      "url"      : "https://buliangzhang24.github.io/wiki/2024-06-06-NavySeal/",
+      "keywords" : "DeepLearning"
     } ,
   
     {
