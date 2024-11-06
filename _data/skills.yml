@@ -11,6 +11,9 @@
       - ERDAS IMAGINE
       - ArcGIS
       - QGIS
+      - Agisoft Metashape
+      - CloudCompare
+      - Unity
 
 - name: Other Keywords
   keywords:
